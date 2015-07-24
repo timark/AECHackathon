@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+
+
+    <div class="row">
+        <div class="col-lg-4 col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-control"><i class="fa fa-building fa-lg fa-fw"></i></div>
+                    <h3 class="panel-title">Buildings</h3>
+                </div>
+                <div class="panel media pad-all">
+                    <div class="media-left"><span class="icon-wrap icon-wrap-sm icon-circle bg-info"><i class="fa fa-sitemap fa-2x"></i></span></div>
+                    <div class="media-body">
+                        <p class="text-2x mar-no text-thin" id="NumberOfSites"></p>
+                        <p class="text-muted mar-no">No of Sites on Device</p>
+                    </div>
+                </div>
+                <div class="panel media pad-all">
+                    <div class="media-left"><span class="icon-wrap icon-wrap-sm icon-circle bg-info"><i class="fa fa-building fa-2x"></i></span></div>
+                    <div class="media-body">
+                        <p class="text-2x mar-no text-thin" id="NumberOfBuildings"></p>
+                        <p class="text-muted mar-no">No of Buildings on Device</p>
+                    </div>
+                </div>
+                <div class="panel media pad-all">
+                    <div class="media-left"><span class="icon-wrap icon-wrap-sm icon-circle bg-info"><i class="fa fa-bars fa-2x"></i></span></div>
+                    <div class="media-body">
+                        <p class="text-2x mar-no text-thin" id="NumberOfFloors"></p>
+                        <p class="text-muted mar-no">No of Floors on Device</p>
+                    </div>
+                </div>
+                <div class="panel media pad-all">
+                    <div class="media-left"><span class="icon-wrap icon-wrap-sm icon-circle bg-info"><i class="fa fa-th-large fa-2x"></i></span></div>
+                    <div class="media-body">
+                        <p class="text-2x mar-no text-thin" id="NumberOfSpaces"></p>
+                        <p class="text-muted mar-no">No of Spaces on Device</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="panel panel-purple">
+                <div class="panel-heading">
+                    <div class="panel-control"><i class="fa fa-database fa-lg fa-fw"></i></div>
+                    <h3 class="panel-title">Database</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="panel media pad-all">
+                        <div class="media-left"><span class="icon-wrap icon-wrap-sm icon-circle bg-purple"><i class="fa fa-users fa-2x"></i></span></div>
+                        <div class="media-body">
+                            <p class="text-2x mar-no text-thin" id="NumberOfUsers"></p>
+                            <p class="text-muted mar-no">Registered Users</p>
+                        </div>
+                    </div>
+                    <p id="dbStatus"></p>
+                    <p>Database Name : <span id="dbName"></span></p>
+                    <p>Database Version : <span id="dbVersion"></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <div class="panel-control"><i class="fa fa-clipboard fa-lg fa-fw"></i></div>
+                    <h3 class="panel-title">Surveys</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="panel media pad-all">
+                        <div class="media-left"><span class="icon-wrap icon-wrap-sm icon-circle bg-success"><i class="fa fa-clipboard fa-2x"></i></span></div>
+                        <div class="media-body">
+                            <p class="text-2x mar-no text-thin" id="NumberOfSurveys"></p>
+                            <p class="text-muted mar-no">No of Surveys</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!--===================================================-->
+<!-- END OF CONTENT CONTAINER -->
+@section scripts
+{
+   @Scripts.Render("~/bundles/AECHackathon")
+}

@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Projects";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<div class="panel pad-top">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class='icon-lg fa fa-building'></i>&nbsp;Models</h3>
+    </div>
+
+    <div class="panel-body">
+        <table class="table table-striped table-bordered"
+               data-search="true"
+               data-show-refresh="true"
+               data-show-toggle="true"
+               data-show-columns="true"
+               data-sort-name="id"
+               data-page-list="[15, 20, 50]"
+               data-page-size="15"
+               data-pagination="true" data-show-pagination-switch="true"
+               data-card-view="false"
+               id="table">
+            <thead>
+                <tr>
+                    <th data-field="Name" data-sortable="true">Name</th>
+                    <th data-field="Description" data-sortable="true">Description</th>
+                    <th data-field="Location" data-sortable="true">Location</th>
+                    <th data-field="FileType" data-sortable="true" class="hidden-xs">File Type</th>
+                    <th data-field="DataStore" data-sortable="true" class="hidden-xs">Data Store</th>
+                    <th data-hide="all" data-field="actions" data-sortable="false">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tableResults"></tbody>
+        </table>
+    </div>
+</div>
+
+<!--===================================================-->
+<!-- END OF CONTENT CONTAINER -->
+@section scripts
+{
+    @Scripts.Render("~/bundles/AECHackathon")
+    <script>
+        $(document).ready(function () {
+            GetRecordSet()
+        })
+
+        var data = [];
+        function GetRecordSet()
+        {
+            var actBtns = "<div class='btn-group'>"
+            actBtns += "<button class='btn btn-default btn-icon btn-hover-info icon-lg fa fa-info add-tooltip' onclick='goToModel()' title='model'></button>"
+            actBtns += "</div>"
+
+            var obj = {
+                Name: "2DO5",
+                Description: "MAIN MECHANICAL ROOM",
+                Location: "Second Floor",
+                FileType: "Revit",
+                DataStore: "AutoDesk 360",
+                actions : actBtns
+            }
+
+            data.push(obj);
+
+            $('#table').bootstrapTable({
+                data: data
+            })
+        }
+            
+        function goToModel(IDModel)
+        {
+            var params = {
+                "IDModel": IDModel
+            }
+            $.redirect("/Home/Index", params, "post", "_self")
+        }
+
+
+    </script>
+    
+}

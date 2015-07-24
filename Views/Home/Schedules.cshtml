@@ -1,0 +1,95 @@
+﻿
+@{
+  
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+<div class="panel pad-top">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class='icon-lg fa fa-sitemap'></i>&nbsp;Schedules</h3>
+    </div>
+
+    <div class="panel-body">
+        <table class="table table-striped table-bordered"
+               data-search="true"
+               data-show-refresh="true"
+               data-show-toggle="true"
+               data-show-columns="true"
+               data-sort-name="id"
+               data-page-list="[15, 20, 50]"
+               data-page-size="15"
+               data-pagination="true" data-show-pagination-switch="true"
+               data-card-view="false"
+               id="table">
+            <thead>
+                <tr>
+                    <th data-field="Code" data-sortable="true">Code</th>
+                    <th data-field="Classification" data-sortable="true">Classification</th>
+                    
+                    <th data-field="Category" data-sortable="true" class="hidden-xs">Category</th>
+                    <th data-hide="all" data-field="actions" data-sortable="false">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tableResults"></tbody>
+        </table>
+    </div>
+</div>
+
+    <!--===================================================-->
+    <!-- END OF CONTENT CONTAINER -->
+    @section scripts
+{
+        @Scripts.Render("~/bundles/AECHackathon")
+        <script>
+            $(document).ready(function () {
+                GetRecordSet()
+            })
+
+            var data = [];
+            function GetRecordSet() {
+                var actBtns = "<div class='btn-group'>"
+                actBtns += "<button class='btn btn-default btn-icon btn-hover-info icon-lg fa fa-info add-tooltip' onclick='goTo()' title='system details'></button>"
+                actBtns += "</div>"
+
+                var obj = {
+                    Code: "23-30 10",
+                    Classification: "Doors",                   
+                    Category: "23-30 10: Doors",
+                    actions: actBtns
+                }
+
+                data.push(obj);
+
+                var obj = {
+                    Code: "23-80 70 11 14 11",
+                    Classification: "Downlights",
+                    Category: "23-80 70 11 14 11: Downlights",
+                    actions: actBtns
+                }
+
+                data.push(obj);
+
+                var obj = {
+                    Code: "23-80 70 11 11",
+                    Classification: "General Luminaries, Non Directional",
+                    Category: "23-80 70 11 11: General Luminaries, Non Directional",
+                    actions: actBtns
+                }
+
+                data.push(obj);
+
+                $('#table').bootstrapTable({
+                    data: data
+                })
+            }
+
+            function goTo(IDSchedule) {
+                var params = {
+                    "IDSchedule": IDSchedule
+                }
+                $.redirect("/Home/Schedule", params, "post", "_self")
+            }
+
+
+        </script>
+    }

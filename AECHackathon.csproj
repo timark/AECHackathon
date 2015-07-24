@@ -1,0 +1,1771 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7941B4CD-9557-4C17-A605-B97B452407D9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AECHackathon</RootNamespace>
+    <AssemblyName>AECHackathon</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Common\getAutoDeskAuthoToken.cs" />
+    <Compile Include="Common\ProductLibraryService.cs" />
+    <Compile Include="Common\NavBuilder.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductLibraryController.cs" />
+    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountBindingModels.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ifcObjects.cs" />
+    <Compile Include="Models\NavMenuModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\apFonts.css" />
+    <Content Include="Content\bootstrap-table.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\fonts\font-awesome\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\aechlogo50x50.png" />
+    <Content Include="Content\jquery-ui.min.css" />
+    <Content Include="Content\map.css" />
+    <Content Include="Content\nifty-demo.css" />
+    <Content Include="Content\nifty-demo.min.css" />
+    <Content Include="Content\nifty.css" />
+    <Content Include="Content\nifty.min.css" />
+    <Content Include="Content\plugins.min.css" />
+    <Content Include="Content\plugins\morris.css" />
+    <Content Include="Content\Roboto.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\font-awesome\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="Content\fonts\font-awesome\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\font-awesome\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\font-awesome\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\font-awesome\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="plugins\bootstrap-table\extensions\editable\README.md" />
+    <Content Include="plugins\bootstrap-table\extensions\export\README.md" />
+    <Content Include="plugins\bootstrap-table\extensions\filter\README.md" />
+    <Content Include="plugins\bootstrap-table\extensions\flatJSON\README.md" />
+    <Content Include="plugins\bootstrap-table\locale\README.md" />
+    <Content Include="plugins\datatables\examples\resources\font\raleway_thin-webfont.eot" />
+    <Content Include="plugins\datatables\examples\resources\font\raleway_thin-webfont.ttf" />
+    <Content Include="plugins\datatables\examples\resources\font\raleway_thin-webfont.woff" />
+    <Content Include="plugins\datatables\examples\resources\jqueryui\dataTables.jqueryui.scss" />
+    <Content Include="plugins\datatables\examples\resources\syntax\Syntax Highlighter license" />
+    <Content Include="plugins\datatables\extensions\Responsive\css\dataTables.responsive.scss" />
+    <Content Include="plugins\datatables\extensions\Responsive\Readme.md" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\psd\collection.psd" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\psd\copy document.psd" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\psd\file_types.psd" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\psd\printer.psd" />
+    <Content Include="plugins\datatables\media\images\Sorting icons.psd" />
+    <Content Include="plugins\flot-charts\API.md" />
+    <Content Include="plugins\flot-charts\CONTRIBUTING.md" />
+    <Content Include="plugins\flot-charts\examples\ajax\data-eu-gdp-growth-1.json" />
+    <Content Include="plugins\flot-charts\examples\ajax\data-eu-gdp-growth-2.json" />
+    <Content Include="plugins\flot-charts\examples\ajax\data-eu-gdp-growth-3.json" />
+    <Content Include="plugins\flot-charts\examples\ajax\data-eu-gdp-growth-4.json" />
+    <Content Include="plugins\flot-charts\examples\ajax\data-eu-gdp-growth-5.json" />
+    <Content Include="plugins\flot-charts\examples\ajax\data-eu-gdp-growth.json" />
+    <Content Include="plugins\flot-charts\examples\ajax\data-japan-gdp-growth.json" />
+    <Content Include="plugins\flot-charts\examples\ajax\data-usa-gdp-growth.json" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\africa" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\antarctica" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\asia" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\australasia" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\backward" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\etcetera" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\europe" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\factory" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\iso3166.tab" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\leapseconds" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\northamerica" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\pacificnew" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\solar87" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\solar88" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\solar89" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\southamerica" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\systemv" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\yearistype.sh" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\zone.tab" />
+    <Content Include="plugins\flot-charts\FAQ.md" />
+    <Content Include="plugins\flot-charts\Makefile" />
+    <Content Include="plugins\flot-charts\NEWS.md" />
+    <Content Include="plugins\flot-charts\PLUGINS.md" />
+    <Content Include="plugins\flot-charts\README.md" />
+    <Content Include="plugins\font-awesome\css\font-awesome.css.map" />
+    <Content Include="plugins\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="plugins\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="plugins\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="plugins\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="plugins\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="plugins\font-awesome\less\animated.less" />
+    <Content Include="plugins\font-awesome\less\bordered-pulled.less" />
+    <Content Include="plugins\font-awesome\less\core.less" />
+    <Content Include="plugins\font-awesome\less\fixed-width.less" />
+    <Content Include="plugins\font-awesome\less\font-awesome.less" />
+    <Content Include="plugins\font-awesome\less\icons.less" />
+    <Content Include="plugins\font-awesome\less\larger.less" />
+    <Content Include="plugins\font-awesome\less\list.less" />
+    <Content Include="plugins\font-awesome\less\mixins.less" />
+    <Content Include="plugins\font-awesome\less\path.less" />
+    <Content Include="plugins\font-awesome\less\rotated-flipped.less" />
+    <Content Include="plugins\font-awesome\less\stacked.less" />
+    <Content Include="plugins\font-awesome\less\variables.less" />
+    <Content Include="plugins\font-awesome\scss\font-awesome.scss" />
+    <Content Include="plugins\font-awesome\scss\_animated.scss" />
+    <Content Include="plugins\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="plugins\font-awesome\scss\_core.scss" />
+    <Content Include="plugins\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="plugins\font-awesome\scss\_icons.scss" />
+    <Content Include="plugins\font-awesome\scss\_larger.scss" />
+    <Content Include="plugins\font-awesome\scss\_list.scss" />
+    <Content Include="plugins\font-awesome\scss\_mixins.scss" />
+    <Content Include="plugins\font-awesome\scss\_path.scss" />
+    <Content Include="plugins\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="plugins\font-awesome\scss\_stacked.scss" />
+    <Content Include="plugins\font-awesome\scss\_variables.scss" />
+    <Content Include="plugins\fooTable\.csslintrc" />
+    <Content Include="plugins\fooTable\.gitattributes" />
+    <Content Include="plugins\fooTable\.jshintrc" />
+    <Content Include="plugins\fooTable\.travis.yml" />
+    <Content Include="plugins\fooTable\bower.json" />
+    <Content Include="plugins\fooTable\component.json" />
+    <Content Include="plugins\fooTable\composer.json" />
+    <Content Include="plugins\fooTable\css\fonts\footable.eot" />
+    <Content Include="plugins\fooTable\css\fonts\footable.ttf" />
+    <Content Include="plugins\fooTable\css\fonts\footable.woff" />
+    <Content Include="plugins\fooTable\demos\fonts\glyphiconshalflings-regular.eot" />
+    <Content Include="plugins\fooTable\demos\fonts\glyphiconshalflings-regular.otf" />
+    <Content Include="plugins\fooTable\demos\fonts\glyphiconshalflings-regular.ttf" />
+    <Content Include="plugins\fooTable\demos\fonts\glyphiconshalflings-regular.woff" />
+    <Content Include="plugins\fooTable\footable.jquery.json" />
+    <Content Include="plugins\fooTable\icomoon\footable.json" />
+    <Content Include="plugins\fooTable\less\footable.core.less" />
+    <Content Include="plugins\fooTable\less\footable.metro.less" />
+    <Content Include="plugins\fooTable\less\footable.standalone.less" />
+    <Content Include="plugins\fooTable\LICENSE" />
+    <Content Include="plugins\fooTable\package.json" />
+    <Content Include="plugins\fooTable\README.md" />
+    <Content Include="plugins\fooTable\screenshot.pdn" />
+    <Content Include="plugins\fullcalendar\demos\json\events.json" />
+    <Content Include="plugins\gauge-js\gauge.coffee" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\.gitignore" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\.jshintrc" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\blueimp-file-upload.jquery.json" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\bower.json" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\CONTRIBUTING.md" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\package.json" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\README.md" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\gae-go\app.yaml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\gae-go\app\main.go" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\gae-python\app.yaml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\gae-python\main.py" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\node\.gitignore" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\node\package.json" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\node\public\files\.gitignore" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\node\public\files\thumbnail\.gitignore" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\node\tmp\.gitignore" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\php\files\.gitignore" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\php\files\.htaccess" />
+    <Content Include="plugins\jQuery-Scanner-Detection\README.md" />
+    <Content Include="plugins\jQuery-Scanner-Detection\scannerdetection.jquery.json" />
+    <Content Include="plugins\x-editable\LICENSE-MIT" />
+    <Content Include="plugins\x-editable\README.md" />
+    <Content Include="fonts\activePLAN.eot" />
+    <Content Include="fonts\activePLAN.ttf" />
+    <Content Include="fonts\activePLAN.woff" />
+    <Content Include="fonts\font-awesome\fontawesome-webfont.eot" />
+    <Content Include="fonts\font-awesome\fontawesome-webfont.ttf" />
+    <Content Include="fonts\font-awesome\fontawesome-webfont.woff" />
+    <Content Include="fonts\font-awesome\FontAwesome.otf" />
+    <Content Include="fonts\opensans.woff" />
+    <Content Include="fonts\roboto-bold.woff" />
+    <Content Include="fonts\roboto-light.woff" />
+    <Content Include="fonts\roboto-medium.woff" />
+    <Content Include="fonts\roboto-regular.woff" />
+    <Content Include="fonts\Roboto.woff" />
+    <None Include="Properties\PublishProfiles\azure.pubxml" />
+    <None Include="Properties\PublishProfiles\local.pubxml" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Icon.png" />
+    <Content Include="plugins\animate-css\animate.css" />
+    <Content Include="plugins\animate-css\animate.min.css" />
+    <Content Include="plugins\animate-css\_notes\dwsync.xml" />
+    <Content Include="plugins\bootbox\bootbox.js" />
+    <Content Include="plugins\bootbox\bootbox.min.js" />
+    <Content Include="plugins\bootbox\LICENSE.txt" />
+    <Content Include="plugins\bootbox\_notes\dwsync.xml" />
+    <Content Include="plugins\bootstrap-datepicker\bootstrap-datepicker.css" />
+    <Content Include="plugins\bootstrap-datepicker\bootstrap-datepicker.js" />
+    <Content Include="plugins\bootstrap-datepicker\LICENSE.txt" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ar.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.az.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.bs.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.cy.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.da.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.de.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.el.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.en-GB.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.es.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.et.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.eu.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.fa.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.fo.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.fr-CH.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.gl.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.he.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.hy.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.id.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.is.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.it-CH.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.it.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ka.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.kh.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.kk.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.mk.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.nl-BE.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.no.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sq.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sr-latin.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sr.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.th.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.uk.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.vi.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="plugins\bootstrap-datepicker\locales\_notes\dwsync.xml" />
+    <Content Include="plugins\bootstrap-datepicker\_notes\dwsync.xml" />
+    <Content Include="plugins\bootstrap-select\bootstrap-select.css" />
+    <Content Include="plugins\bootstrap-select\bootstrap-select.js" />
+    <Content Include="plugins\bootstrap-select\bootstrap-select.min.css" />
+    <Content Include="plugins\bootstrap-select\bootstrap-select.min.js" />
+    <Content Include="plugins\bootstrap-select\LICENSE.txt" />
+    <Content Include="plugins\bootstrap-select\_notes\dwsync.xml" />
+    <Content Include="plugins\bootstrap-table\bootstrap-table.css" />
+    <Content Include="plugins\bootstrap-table\bootstrap-table.js" />
+    <Content Include="plugins\bootstrap-table\bootstrap-table.min.css" />
+    <Content Include="plugins\bootstrap-table\bootstrap-table.min.js" />
+    <Content Include="plugins\bootstrap-table\extensions\editable\bootstrap-table-editable.js" />
+    <Content Include="plugins\bootstrap-table\extensions\editable\bootstrap-table-editable.min.js" />
+    <Content Include="plugins\bootstrap-table\extensions\editable\_notes\dwsync.xml" />
+    <Content Include="plugins\bootstrap-table\extensions\export\bootstrap-table-export.js" />
+    <Content Include="plugins\bootstrap-table\extensions\export\bootstrap-table-export.min.js" />
+    <Content Include="plugins\bootstrap-table\extensions\export\_notes\dwsync.xml" />
+    <Content Include="plugins\bootstrap-table\extensions\filter\bootstrap-table-filter.js" />
+    <Content Include="plugins\bootstrap-table\extensions\filter\bootstrap-table-filter.min.js" />
+    <Content Include="plugins\bootstrap-table\extensions\filter\_notes\dwsync.xml" />
+    <Content Include="plugins\bootstrap-table\extensions\flatJSON\bootstrap-table-flatJSON.js" />
+    <Content Include="plugins\bootstrap-table\extensions\flatJSON\bootstrap-table-flatJSON.min.js" />
+    <Content Include="plugins\bootstrap-table\extensions\flatJSON\_notes\dwsync.xml" />
+    <Content Include="plugins\bootstrap-table\LICENSE.txt" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-cs-CZ.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-cs-CZ.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-da-DK.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-da-DK.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-de-DE.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-de-DE.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-el-GR.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-el-GR.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-en-US.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-en-US.js.template" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-en-US.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-es-AR.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-es-AR.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-es-CR.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-es-CR.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-es-NI.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-es-NI.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-fr-BE.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-fr-BE.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-fr-FR.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-fr-FR.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-hu-HU.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-hu-HU.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-it-IT.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-it-IT.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-ko-KR.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-ko-KR.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-nl-NL.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-nl-NL.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-pl-PL.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-pl-PL.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-pt-BR.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-pt-BR.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-ru-RU.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-ru-RU.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-sk-SK.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-sk-SK.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-th-TH.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-th-TH.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-tr-TR.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-tr-TR.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-ur-PK.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-ur-PK.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-vi-VN.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-vi-VN.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-zh-CN.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-zh-CN.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-zh-TW.js" />
+    <Content Include="plugins\bootstrap-table\locale\bootstrap-table-zh-TW.min.js" />
+    <Content Include="plugins\bootstrap-table\locale\_notes\dwsync.xml" />
+    <Content Include="plugins\bootstrap-table\_notes\dwsync.xml" />
+    <Content Include="plugins\bootstrap-tagsinput\bootstrap-tagsinput.css" />
+    <Content Include="plugins\bootstrap-tagsinput\bootstrap-tagsinput.js" />
+    <Content Include="plugins\bootstrap-tagsinput\bootstrap-tagsinput.min.js" />
+    <Content Include="plugins\bootstrap-tagsinput\LICENSE.txt" />
+    <Content Include="plugins\bootstrap-tagsinput\_notes\dwsync.xml" />
+    <Content Include="plugins\bootstrap-timepicker\bootstrap-timepicker.css" />
+    <Content Include="plugins\bootstrap-timepicker\bootstrap-timepicker.js" />
+    <Content Include="plugins\bootstrap-timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="plugins\bootstrap-timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="plugins\bootstrap-timepicker\LICENSE.txt" />
+    <Content Include="plugins\bootstrap-timepicker\_notes\dwsync.xml" />
+    <Content Include="plugins\bootstrap-validator\bootstrapValidator.css" />
+    <Content Include="plugins\bootstrap-validator\bootstrapValidator.js" />
+    <Content Include="plugins\bootstrap-validator\bootstrapValidator.min.css" />
+    <Content Include="plugins\bootstrap-validator\bootstrapValidator.min.js" />
+    <Content Include="plugins\bootstrap-validator\_notes\dwsync.xml" />
+    <Content Include="plugins\bootstrap-wizard\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="plugins\bootstrap-wizard\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="plugins\bootstrap-wizard\bootstrap\css\bootstrap.css" />
+    <Content Include="plugins\bootstrap-wizard\bootstrap\css\bootstrap.min.css" />
+    <Content Include="plugins\bootstrap-wizard\bootstrap\css\_notes\dwsync.xml" />
+    <Content Include="plugins\bootstrap-wizard\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="plugins\bootstrap-wizard\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="plugins\bootstrap-wizard\bootstrap\img\_notes\dwsync.xml" />
+    <Content Include="plugins\bootstrap-wizard\bootstrap\js\bootstrap.js" />
+    <Content Include="plugins\bootstrap-wizard\bootstrap\js\bootstrap.min.js" />
+    <Content Include="plugins\bootstrap-wizard\bootstrap\js\_notes\dwsync.xml" />
+    <Content Include="plugins\bootstrap-wizard\examples\basic-custom.html" />
+    <Content Include="plugins\bootstrap-wizard\examples\basic-custombuttons.html" />
+    <Content Include="plugins\bootstrap-wizard\examples\basic-custombuttonsfirstlast.html" />
+    <Content Include="plugins\bootstrap-wizard\examples\basic-disabletabclick.html" />
+    <Content Include="plugins\bootstrap-wizard\examples\basic-finishbutton.html" />
+    <Content Include="plugins\bootstrap-wizard\examples\basic-formvalidation.html" />
+    <Content Include="plugins\bootstrap-wizard\examples\basic-inverse.html" />
+    <Content Include="plugins\bootstrap-wizard\examples\basic-pills.html" />
+    <Content Include="plugins\bootstrap-wizard\examples\basic-progressbar.html" />
+    <Content Include="plugins\bootstrap-wizard\examples\basic-tabsleft.html" />
+    <Content Include="plugins\bootstrap-wizard\examples\basic.html" />
+    <Content Include="plugins\bootstrap-wizard\examples\custom.css" />
+    <Content Include="plugins\bootstrap-wizard\examples\multiple.html" />
+    <Content Include="plugins\bootstrap-wizard\examples\remove-step.html" />
+    <Content Include="plugins\bootstrap-wizard\examples\validation.html" />
+    <Content Include="plugins\bootstrap-wizard\examples\_notes\dwsync.xml" />
+    <Content Include="plugins\bootstrap-wizard\index.html" />
+    <Content Include="plugins\bootstrap-wizard\jquery.bootstrap.wizard.js" />
+    <Content Include="plugins\bootstrap-wizard\jquery.bootstrap.wizard.min.js" />
+    <Content Include="plugins\bootstrap-wizard\MIT-LICENSE.txt" />
+    <Content Include="plugins\bootstrap-wizard\_notes\dwsync.xml" />
+    <Content Include="plugins\chosen\chosen.css" />
+    <Content Include="plugins\chosen\chosen.jquery.js" />
+    <Content Include="plugins\chosen\chosen.jquery.min.js" />
+    <Content Include="plugins\chosen\chosen.min.css" />
+    <Content Include="plugins\chosen\LICENSE.txt" />
+    <Content Include="plugins\chosen\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\advanced_init\column_render.html" />
+    <Content Include="plugins\datatables\examples\advanced_init\complex_header.html" />
+    <Content Include="plugins\datatables\examples\advanced_init\defaults.html" />
+    <Content Include="plugins\datatables\examples\advanced_init\dom_multiple_elements.html" />
+    <Content Include="plugins\datatables\examples\advanced_init\dom_toolbar.html" />
+    <Content Include="plugins\datatables\examples\advanced_init\dt_events.html" />
+    <Content Include="plugins\datatables\examples\advanced_init\events_live.html" />
+    <Content Include="plugins\datatables\examples\advanced_init\footer_callback.html" />
+    <Content Include="plugins\datatables\examples\advanced_init\html5-data-attributes.html" />
+    <Content Include="plugins\datatables\examples\advanced_init\index.html" />
+    <Content Include="plugins\datatables\examples\advanced_init\language_file.html" />
+    <Content Include="plugins\datatables\examples\advanced_init\length_menu.html" />
+    <Content Include="plugins\datatables\examples\advanced_init\object_dom_read.html" />
+    <Content Include="plugins\datatables\examples\advanced_init\row_callback.html" />
+    <Content Include="plugins\datatables\examples\advanced_init\row_grouping.html" />
+    <Content Include="plugins\datatables\examples\advanced_init\sort_direction_control.html" />
+    <Content Include="plugins\datatables\examples\advanced_init\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\ajax\custom_data_flat.html" />
+    <Content Include="plugins\datatables\examples\ajax\custom_data_property.html" />
+    <Content Include="plugins\datatables\examples\ajax\data\arrays.txt" />
+    <Content Include="plugins\datatables\examples\ajax\data\arrays_custom_prop.txt" />
+    <Content Include="plugins\datatables\examples\ajax\data\arrays_subobjects.txt" />
+    <Content Include="plugins\datatables\examples\ajax\data\objects.txt" />
+    <Content Include="plugins\datatables\examples\ajax\data\objects_deep.txt" />
+    <Content Include="plugins\datatables\examples\ajax\data\objects_root_array.txt" />
+    <Content Include="plugins\datatables\examples\ajax\data\objects_subarrays.txt" />
+    <Content Include="plugins\datatables\examples\ajax\data\orthogonal.txt" />
+    <Content Include="plugins\datatables\examples\ajax\data\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\ajax\deep.html" />
+    <Content Include="plugins\datatables\examples\ajax\defer_render.html" />
+    <Content Include="plugins\datatables\examples\ajax\index.html" />
+    <Content Include="plugins\datatables\examples\ajax\null_data_source.html" />
+    <Content Include="plugins\datatables\examples\ajax\objects.html" />
+    <Content Include="plugins\datatables\examples\ajax\objects_subarrays.html" />
+    <Content Include="plugins\datatables\examples\ajax\orthogonal-data.html" />
+    <Content Include="plugins\datatables\examples\ajax\simple.html" />
+    <Content Include="plugins\datatables\examples\ajax\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\api\add_row.html" />
+    <Content Include="plugins\datatables\examples\api\api_in_init.html" />
+    <Content Include="plugins\datatables\examples\api\counter_columns.html" />
+    <Content Include="plugins\datatables\examples\api\form.html" />
+    <Content Include="plugins\datatables\examples\api\highlight.html" />
+    <Content Include="plugins\datatables\examples\api\index.html" />
+    <Content Include="plugins\datatables\examples\api\multi_filter.html" />
+    <Content Include="plugins\datatables\examples\api\multi_filter_select.html" />
+    <Content Include="plugins\datatables\examples\api\regex.html" />
+    <Content Include="plugins\datatables\examples\api\row_details.html" />
+    <Content Include="plugins\datatables\examples\api\select_row.html" />
+    <Content Include="plugins\datatables\examples\api\select_single_row.html" />
+    <Content Include="plugins\datatables\examples\api\show_hide.html" />
+    <Content Include="plugins\datatables\examples\api\tabs_and_scrolling.html" />
+    <Content Include="plugins\datatables\examples\api\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\basic_init\alt_pagination.html" />
+    <Content Include="plugins\datatables\examples\basic_init\comma-decimal.html" />
+    <Content Include="plugins\datatables\examples\basic_init\complex_header.html" />
+    <Content Include="plugins\datatables\examples\basic_init\dom.html" />
+    <Content Include="plugins\datatables\examples\basic_init\filter_only.html" />
+    <Content Include="plugins\datatables\examples\basic_init\flexible_width.html" />
+    <Content Include="plugins\datatables\examples\basic_init\hidden_columns.html" />
+    <Content Include="plugins\datatables\examples\basic_init\index.html" />
+    <Content Include="plugins\datatables\examples\basic_init\language.html" />
+    <Content Include="plugins\datatables\examples\basic_init\multiple_tables.html" />
+    <Content Include="plugins\datatables\examples\basic_init\multi_col_sort.html" />
+    <Content Include="plugins\datatables\examples\basic_init\scroll_x.html" />
+    <Content Include="plugins\datatables\examples\basic_init\scroll_xy.html" />
+    <Content Include="plugins\datatables\examples\basic_init\scroll_y.html" />
+    <Content Include="plugins\datatables\examples\basic_init\scroll_y_theme.html" />
+    <Content Include="plugins\datatables\examples\basic_init\state_save.html" />
+    <Content Include="plugins\datatables\examples\basic_init\table_sorting.html" />
+    <Content Include="plugins\datatables\examples\basic_init\zero_configuration.html" />
+    <Content Include="plugins\datatables\examples\basic_init\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\data_sources\ajax.html" />
+    <Content Include="plugins\datatables\examples\data_sources\dom.html" />
+    <Content Include="plugins\datatables\examples\data_sources\index.html" />
+    <Content Include="plugins\datatables\examples\data_sources\js_array.html" />
+    <Content Include="plugins\datatables\examples\data_sources\server_side.html" />
+    <Content Include="plugins\datatables\examples\data_sources\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\index.html" />
+    <Content Include="plugins\datatables\examples\plug-ins\api.html" />
+    <Content Include="plugins\datatables\examples\plug-ins\dom_sort.html" />
+    <Content Include="plugins\datatables\examples\plug-ins\index.html" />
+    <Content Include="plugins\datatables\examples\plug-ins\range_filtering.html" />
+    <Content Include="plugins\datatables\examples\plug-ins\sorting_auto.html" />
+    <Content Include="plugins\datatables\examples\plug-ins\sorting_manual.html" />
+    <Content Include="plugins\datatables\examples\plug-ins\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\resources\bootstrap\3\dataTables.bootstrap.css" />
+    <Content Include="plugins\datatables\examples\resources\bootstrap\3\dataTables.bootstrap.js" />
+    <Content Include="plugins\datatables\examples\resources\bootstrap\3\index.html" />
+    <Content Include="plugins\datatables\examples\resources\bootstrap\3\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\resources\bootstrap\images\sort_asc.png" />
+    <Content Include="plugins\datatables\examples\resources\bootstrap\images\sort_asc_disabled.png" />
+    <Content Include="plugins\datatables\examples\resources\bootstrap\images\sort_both.png" />
+    <Content Include="plugins\datatables\examples\resources\bootstrap\images\sort_desc.png" />
+    <Content Include="plugins\datatables\examples\resources\bootstrap\images\sort_desc_disabled.png" />
+    <Content Include="plugins\datatables\examples\resources\bootstrap\images\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\resources\demo.css" />
+    <Content Include="plugins\datatables\examples\resources\demo.js" />
+    <Content Include="plugins\datatables\examples\resources\details_close.png" />
+    <Content Include="plugins\datatables\examples\resources\details_open.png" />
+    <Content Include="plugins\datatables\examples\resources\de_DE.txt" />
+    <Content Include="plugins\datatables\examples\resources\examples.php" />
+    <Content Include="plugins\datatables\examples\resources\font\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\resources\foundation\dataTables.foundation.css" />
+    <Content Include="plugins\datatables\examples\resources\foundation\dataTables.foundation.js" />
+    <Content Include="plugins\datatables\examples\resources\foundation\images\sort_asc.png" />
+    <Content Include="plugins\datatables\examples\resources\foundation\images\sort_asc_disabled.png" />
+    <Content Include="plugins\datatables\examples\resources\foundation\images\sort_both.png" />
+    <Content Include="plugins\datatables\examples\resources\foundation\images\sort_desc.png" />
+    <Content Include="plugins\datatables\examples\resources\foundation\images\sort_desc_disabled.png" />
+    <Content Include="plugins\datatables\examples\resources\foundation\images\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\resources\foundation\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\resources\jqueryui\dataTables.jqueryui.css" />
+    <Content Include="plugins\datatables\examples\resources\jqueryui\dataTables.jqueryui.js" />
+    <Content Include="plugins\datatables\examples\resources\jqueryui\index.html" />
+    <Content Include="plugins\datatables\examples\resources\jqueryui\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\resources\syntax\shCore.css" />
+    <Content Include="plugins\datatables\examples\resources\syntax\shCore.js" />
+    <Content Include="plugins\datatables\examples\resources\syntax\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\resources\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\server_side\custom_vars.html" />
+    <Content Include="plugins\datatables\examples\server_side\defer_loading.html" />
+    <Content Include="plugins\datatables\examples\server_side\ids.html" />
+    <Content Include="plugins\datatables\examples\server_side\index.html" />
+    <Content Include="plugins\datatables\examples\server_side\jsonp.html" />
+    <Content Include="plugins\datatables\examples\server_side\object_data.html" />
+    <Content Include="plugins\datatables\examples\server_side\pipeline.html" />
+    <Content Include="plugins\datatables\examples\server_side\post.html" />
+    <Content Include="plugins\datatables\examples\server_side\row_details.html" />
+    <Content Include="plugins\datatables\examples\server_side\scripts\ids-arrays.php" />
+    <Content Include="plugins\datatables\examples\server_side\scripts\ids-objects.php" />
+    <Content Include="plugins\datatables\examples\server_side\scripts\jsonp.php" />
+    <Content Include="plugins\datatables\examples\server_side\scripts\mysql.sql" />
+    <Content Include="plugins\datatables\examples\server_side\scripts\objects.php" />
+    <Content Include="plugins\datatables\examples\server_side\scripts\post.php" />
+    <Content Include="plugins\datatables\examples\server_side\scripts\postgres.sql" />
+    <Content Include="plugins\datatables\examples\server_side\scripts\server_processing.php" />
+    <Content Include="plugins\datatables\examples\server_side\scripts\sqlite.sql" />
+    <Content Include="plugins\datatables\examples\server_side\scripts\sqlserver.sql" />
+    <Content Include="plugins\datatables\examples\server_side\scripts\ssp.class.php" />
+    <Content Include="plugins\datatables\examples\server_side\scripts\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\server_side\select_rows.html" />
+    <Content Include="plugins\datatables\examples\server_side\simple.html" />
+    <Content Include="plugins\datatables\examples\server_side\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\styling\bootstrap.html" />
+    <Content Include="plugins\datatables\examples\styling\cell-border.html" />
+    <Content Include="plugins\datatables\examples\styling\compact.html" />
+    <Content Include="plugins\datatables\examples\styling\display.html" />
+    <Content Include="plugins\datatables\examples\styling\foundation.html" />
+    <Content Include="plugins\datatables\examples\styling\hover.html" />
+    <Content Include="plugins\datatables\examples\styling\index.html" />
+    <Content Include="plugins\datatables\examples\styling\jqueryUI.html" />
+    <Content Include="plugins\datatables\examples\styling\no-classes.html" />
+    <Content Include="plugins\datatables\examples\styling\order-column.html" />
+    <Content Include="plugins\datatables\examples\styling\row-border.html" />
+    <Content Include="plugins\datatables\examples\styling\stripe.html" />
+    <Content Include="plugins\datatables\examples\styling\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\examples\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\AutoFill\css\dataTables.autoFill.css" />
+    <Content Include="plugins\datatables\extensions\AutoFill\css\dataTables.autoFill.min.css" />
+    <Content Include="plugins\datatables\extensions\AutoFill\css\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\AutoFill\examples\columns.html" />
+    <Content Include="plugins\datatables\extensions\AutoFill\examples\complete-callback.html" />
+    <Content Include="plugins\datatables\extensions\AutoFill\examples\fill-both.html" />
+    <Content Include="plugins\datatables\extensions\AutoFill\examples\fill-horizontal.html" />
+    <Content Include="plugins\datatables\extensions\AutoFill\examples\index.html" />
+    <Content Include="plugins\datatables\extensions\AutoFill\examples\scrolling.html" />
+    <Content Include="plugins\datatables\extensions\AutoFill\examples\simple.html" />
+    <Content Include="plugins\datatables\extensions\AutoFill\examples\step-callback.html" />
+    <Content Include="plugins\datatables\extensions\AutoFill\examples\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\AutoFill\images\filler.png" />
+    <Content Include="plugins\datatables\extensions\AutoFill\images\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\AutoFill\js\dataTables.autoFill.js" />
+    <Content Include="plugins\datatables\extensions\AutoFill\js\dataTables.autoFill.min.js" />
+    <Content Include="plugins\datatables\extensions\AutoFill\js\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\AutoFill\Readme.txt" />
+    <Content Include="plugins\datatables\extensions\AutoFill\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\ColReorder\css\dataTables.colReorder.css" />
+    <Content Include="plugins\datatables\extensions\ColReorder\css\dataTables.colReorder.min.css" />
+    <Content Include="plugins\datatables\extensions\ColReorder\css\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\ColReorder\examples\alt_insert.html" />
+    <Content Include="plugins\datatables\extensions\ColReorder\examples\colvis.html" />
+    <Content Include="plugins\datatables\extensions\ColReorder\examples\col_filter.html" />
+    <Content Include="plugins\datatables\extensions\ColReorder\examples\fixedcolumns.html" />
+    <Content Include="plugins\datatables\extensions\ColReorder\examples\fixedheader.html" />
+    <Content Include="plugins\datatables\extensions\ColReorder\examples\index.html" />
+    <Content Include="plugins\datatables\extensions\ColReorder\examples\jqueryui.html" />
+    <Content Include="plugins\datatables\extensions\ColReorder\examples\new_init.html" />
+    <Content Include="plugins\datatables\extensions\ColReorder\examples\predefined.html" />
+    <Content Include="plugins\datatables\extensions\ColReorder\examples\realtime.html" />
+    <Content Include="plugins\datatables\extensions\ColReorder\examples\reset.html" />
+    <Content Include="plugins\datatables\extensions\ColReorder\examples\scrolling.html" />
+    <Content Include="plugins\datatables\extensions\ColReorder\examples\server_side.html" />
+    <Content Include="plugins\datatables\extensions\ColReorder\examples\simple.html" />
+    <Content Include="plugins\datatables\extensions\ColReorder\examples\state_save.html" />
+    <Content Include="plugins\datatables\extensions\ColReorder\examples\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\ColReorder\images\insert.png" />
+    <Content Include="plugins\datatables\extensions\ColReorder\images\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\ColReorder\js\dataTables.colReorder.js" />
+    <Content Include="plugins\datatables\extensions\ColReorder\js\dataTables.colReorder.min.js" />
+    <Content Include="plugins\datatables\extensions\ColReorder\js\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\ColReorder\Readme.txt" />
+    <Content Include="plugins\datatables\extensions\ColReorder\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\ColVis\css\dataTables.colVis.css" />
+    <Content Include="plugins\datatables\extensions\ColVis\css\dataTables.colvis.jqueryui.css" />
+    <Content Include="plugins\datatables\extensions\ColVis\css\dataTables.colVis.min.css" />
+    <Content Include="plugins\datatables\extensions\ColVis\css\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\ColVis\examples\button_order.html" />
+    <Content Include="plugins\datatables\extensions\ColVis\examples\exclude_columns.html" />
+    <Content Include="plugins\datatables\extensions\ColVis\examples\group_columns.html" />
+    <Content Include="plugins\datatables\extensions\ColVis\examples\index.html" />
+    <Content Include="plugins\datatables\extensions\ColVis\examples\jqueryui.html" />
+    <Content Include="plugins\datatables\extensions\ColVis\examples\mouseover.html" />
+    <Content Include="plugins\datatables\extensions\ColVis\examples\new_init.html" />
+    <Content Include="plugins\datatables\extensions\ColVis\examples\restore.html" />
+    <Content Include="plugins\datatables\extensions\ColVis\examples\simple.html" />
+    <Content Include="plugins\datatables\extensions\ColVis\examples\text.html" />
+    <Content Include="plugins\datatables\extensions\ColVis\examples\title_callback.html" />
+    <Content Include="plugins\datatables\extensions\ColVis\examples\two_tables.html" />
+    <Content Include="plugins\datatables\extensions\ColVis\examples\two_tables_identical.html" />
+    <Content Include="plugins\datatables\extensions\ColVis\examples\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\ColVis\js\dataTables.colVis.js" />
+    <Content Include="plugins\datatables\extensions\ColVis\js\dataTables.colVis.min.js" />
+    <Content Include="plugins\datatables\extensions\ColVis\js\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\ColVis\Readme.txt" />
+    <Content Include="plugins\datatables\extensions\ColVis\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\css\dataTables.fixedColumns.css" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\css\dataTables.fixedColumns.min.css" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\css\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\examples\bootstrap.html" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\examples\colvis.html" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\examples\col_filter.html" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\examples\css_size.html" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\examples\index.html" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\examples\index_column.html" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\examples\left_right_columns.html" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\examples\right_column.html" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\examples\rowspan.html" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\examples\server-side-processing.html" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\examples\simple.html" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\examples\size_fixed.html" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\examples\size_fluid.html" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\examples\two_columns.html" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\examples\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\js\dataTables.fixedColumns.js" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\js\dataTables.fixedColumns.min.js" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\js\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\Readme.txt" />
+    <Content Include="plugins\datatables\extensions\FixedColumns\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\FixedHeader\css\dataTables.fixedHeader.css" />
+    <Content Include="plugins\datatables\extensions\FixedHeader\css\dataTables.fixedHeader.min.css" />
+    <Content Include="plugins\datatables\extensions\FixedHeader\css\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\FixedHeader\examples\header_footer.html" />
+    <Content Include="plugins\datatables\extensions\FixedHeader\examples\index.html" />
+    <Content Include="plugins\datatables\extensions\FixedHeader\examples\simple.html" />
+    <Content Include="plugins\datatables\extensions\FixedHeader\examples\top_left_right.html" />
+    <Content Include="plugins\datatables\extensions\FixedHeader\examples\two_tables.html" />
+    <Content Include="plugins\datatables\extensions\FixedHeader\examples\zIndexes.html" />
+    <Content Include="plugins\datatables\extensions\FixedHeader\examples\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\FixedHeader\js\dataTables.fixedHeader.js" />
+    <Content Include="plugins\datatables\extensions\FixedHeader\js\dataTables.fixedHeader.min.js" />
+    <Content Include="plugins\datatables\extensions\FixedHeader\js\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\FixedHeader\Readme.txt" />
+    <Content Include="plugins\datatables\extensions\FixedHeader\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\KeyTable\css\dataTables.keyTable.css" />
+    <Content Include="plugins\datatables\extensions\KeyTable\css\dataTables.keyTable.min.css" />
+    <Content Include="plugins\datatables\extensions\KeyTable\css\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\KeyTable\examples\events.html" />
+    <Content Include="plugins\datatables\extensions\KeyTable\examples\html.html" />
+    <Content Include="plugins\datatables\extensions\KeyTable\examples\index.html" />
+    <Content Include="plugins\datatables\extensions\KeyTable\examples\scrolling.html" />
+    <Content Include="plugins\datatables\extensions\KeyTable\examples\simple.html" />
+    <Content Include="plugins\datatables\extensions\KeyTable\examples\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\KeyTable\js\dataTables.keyTable.js" />
+    <Content Include="plugins\datatables\extensions\KeyTable\js\dataTables.keyTable.min.js" />
+    <Content Include="plugins\datatables\extensions\KeyTable\js\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\KeyTable\Readme.txt" />
+    <Content Include="plugins\datatables\extensions\KeyTable\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\Responsive\css\dataTables.responsive.css" />
+    <Content Include="plugins\datatables\extensions\Responsive\css\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\child-rows\column-control.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\child-rows\custom-renderer.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\child-rows\disable-child-rows.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\child-rows\index.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\child-rows\right-column.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\child-rows\whole-row-control.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\child-rows\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\display-control\auto.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\display-control\classes.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\display-control\index.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\display-control\init-classes.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\display-control\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\index.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\initialisation\ajax.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\initialisation\className.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\initialisation\default.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\initialisation\index.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\initialisation\new.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\initialisation\option.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\initialisation\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\styling\bootstrap.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\styling\foundation.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\styling\index.html" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\styling\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\Responsive\examples\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\Responsive\js\dataTables.responsive.js" />
+    <Content Include="plugins\datatables\extensions\Responsive\js\dataTables.responsive.min.js" />
+    <Content Include="plugins\datatables\extensions\Responsive\js\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\Responsive\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\Scroller\css\dataTables.scroller.css" />
+    <Content Include="plugins\datatables\extensions\Scroller\css\dataTables.scroller.min.css" />
+    <Content Include="plugins\datatables\extensions\Scroller\css\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\Scroller\examples\api_scrolling.html" />
+    <Content Include="plugins\datatables\extensions\Scroller\examples\data\2500.txt" />
+    <Content Include="plugins\datatables\extensions\Scroller\examples\data\ssp.php" />
+    <Content Include="plugins\datatables\extensions\Scroller\examples\data\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\Scroller\examples\index.html" />
+    <Content Include="plugins\datatables\extensions\Scroller\examples\large_js_source.html" />
+    <Content Include="plugins\datatables\extensions\Scroller\examples\server-side_processing.html" />
+    <Content Include="plugins\datatables\extensions\Scroller\examples\simple.html" />
+    <Content Include="plugins\datatables\extensions\Scroller\examples\state_saving.html" />
+    <Content Include="plugins\datatables\extensions\Scroller\examples\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\Scroller\images\loading-background.png" />
+    <Content Include="plugins\datatables\extensions\Scroller\images\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\Scroller\js\dataTables.scroller.js" />
+    <Content Include="plugins\datatables\extensions\Scroller\js\dataTables.scroller.min.js" />
+    <Content Include="plugins\datatables\extensions\Scroller\js\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\Scroller\Readme.txt" />
+    <Content Include="plugins\datatables\extensions\Scroller\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\TableTools\css\dataTables.tableTools.css" />
+    <Content Include="plugins\datatables\extensions\TableTools\css\dataTables.tableTools.min.css" />
+    <Content Include="plugins\datatables\extensions\TableTools\css\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\ajax.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\alter_buttons.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\bootstrap.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\button_text.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\collection.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\defaults.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\index.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\jqueryui.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\multiple_tables.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\multi_instance.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\new_init.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\pdf_message.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\plug-in.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\select_column.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\select_multi.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\select_os.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\select_single.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\simple.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\swf_path.html" />
+    <Content Include="plugins\datatables\extensions\TableTools\examples\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\background.png" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\collection.png" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\collection_hover.png" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\copy.png" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\copy_hover.png" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\csv.png" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\csv_hover.png" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\pdf.png" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\pdf_hover.png" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\print.png" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\print_hover.png" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\psd\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\xls.png" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\xls_hover.png" />
+    <Content Include="plugins\datatables\extensions\TableTools\images\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\TableTools\js\dataTables.tableTools.js" />
+    <Content Include="plugins\datatables\extensions\TableTools\js\dataTables.tableTools.min.js" />
+    <Content Include="plugins\datatables\extensions\TableTools\js\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\TableTools\Readme.txt" />
+    <Content Include="plugins\datatables\extensions\TableTools\swf\copy_csv_xls.swf" />
+    <Content Include="plugins\datatables\extensions\TableTools\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="plugins\datatables\extensions\TableTools\swf\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\extensions\TableTools\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\license.txt" />
+    <Content Include="plugins\datatables\media\css\dataTables.bootstrap.css" />
+    <Content Include="plugins\datatables\media\css\jquery.dataTables.css" />
+    <Content Include="plugins\datatables\media\css\jquery.dataTables.min.css" />
+    <Content Include="plugins\datatables\media\css\jquery.dataTables_themeroller.css" />
+    <Content Include="plugins\datatables\media\css\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\media\images\back_disabled.png" />
+    <Content Include="plugins\datatables\media\images\back_enabled.png" />
+    <Content Include="plugins\datatables\media\images\back_enabled_hover.png" />
+    <Content Include="plugins\datatables\media\images\favicon.ico" />
+    <Content Include="plugins\datatables\media\images\forward_disabled.png" />
+    <Content Include="plugins\datatables\media\images\forward_enabled.png" />
+    <Content Include="plugins\datatables\media\images\forward_enabled_hover.png" />
+    <Content Include="plugins\datatables\media\images\sort_asc.png" />
+    <Content Include="plugins\datatables\media\images\sort_asc_disabled.png" />
+    <Content Include="plugins\datatables\media\images\sort_both.png" />
+    <Content Include="plugins\datatables\media\images\sort_desc.png" />
+    <Content Include="plugins\datatables\media\images\sort_desc_disabled.png" />
+    <Content Include="plugins\datatables\media\images\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\media\js\dataTables.bootstrap.js" />
+    <Content Include="plugins\datatables\media\js\jquery.dataTables.js" />
+    <Content Include="plugins\datatables\media\js\jquery.dataTables.min.js" />
+    <Content Include="plugins\datatables\media\js\_notes\dwsync.xml" />
+    <Content Include="plugins\datatables\_notes\dwsync.xml" />
+    <Content Include="plugins\dropzone\dropzone.css" />
+    <Content Include="plugins\dropzone\dropzone.js" />
+    <Content Include="plugins\dropzone\dropzone.min.js" />
+    <Content Include="plugins\dropzone\LICENSE.txt" />
+    <Content Include="plugins\dropzone\_notes\dwsync.xml" />
+    <Content Include="plugins\easy-pie-chart\jquery.easypiechart.js" />
+    <Content Include="plugins\easy-pie-chart\jquery.easypiechart.min.js" />
+    <Content Include="plugins\easy-pie-chart\LICENSE.txt" />
+    <Content Include="plugins\easy-pie-chart\_notes\dwsync.xml" />
+    <Content Include="plugins\fast-click\fastclick.js" />
+    <Content Include="plugins\fast-click\fastclick.min.js" />
+    <Content Include="plugins\fast-click\LICENSE.txt" />
+    <Content Include="plugins\fast-click\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\ajax\index.html" />
+    <Content Include="plugins\flot-charts\examples\ajax\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\annotating\index.html" />
+    <Content Include="plugins\flot-charts\examples\annotating\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\axes-interacting\index.html" />
+    <Content Include="plugins\flot-charts\examples\axes-interacting\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\axes-multiple\index.html" />
+    <Content Include="plugins\flot-charts\examples\axes-multiple\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\date.js" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\index.html" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\tz\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\axes-time-zones\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\axes-time\index.html" />
+    <Content Include="plugins\flot-charts\examples\axes-time\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\background.png" />
+    <Content Include="plugins\flot-charts\examples\basic-options\index.html" />
+    <Content Include="plugins\flot-charts\examples\basic-options\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\basic-usage\index.html" />
+    <Content Include="plugins\flot-charts\examples\basic-usage\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\canvas\index.html" />
+    <Content Include="plugins\flot-charts\examples\canvas\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\categories\index.html" />
+    <Content Include="plugins\flot-charts\examples\categories\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\examples.css" />
+    <Content Include="plugins\flot-charts\examples\image\hs-2004-27-a-large-web.jpg" />
+    <Content Include="plugins\flot-charts\examples\image\index.html" />
+    <Content Include="plugins\flot-charts\examples\image\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\index.html" />
+    <Content Include="plugins\flot-charts\examples\interacting\index.html" />
+    <Content Include="plugins\flot-charts\examples\interacting\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\navigate\arrow-down.gif" />
+    <Content Include="plugins\flot-charts\examples\navigate\arrow-left.gif" />
+    <Content Include="plugins\flot-charts\examples\navigate\arrow-right.gif" />
+    <Content Include="plugins\flot-charts\examples\navigate\arrow-up.gif" />
+    <Content Include="plugins\flot-charts\examples\navigate\index.html" />
+    <Content Include="plugins\flot-charts\examples\navigate\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\percentiles\index.html" />
+    <Content Include="plugins\flot-charts\examples\percentiles\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\realtime\index.html" />
+    <Content Include="plugins\flot-charts\examples\realtime\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\resize\index.html" />
+    <Content Include="plugins\flot-charts\examples\resize\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\selection\index.html" />
+    <Content Include="plugins\flot-charts\examples\selection\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\series-errorbars\index.html" />
+    <Content Include="plugins\flot-charts\examples\series-errorbars\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\series-pie\index.html" />
+    <Content Include="plugins\flot-charts\examples\series-pie\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\series-toggle\index.html" />
+    <Content Include="plugins\flot-charts\examples\series-toggle\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\series-types\index.html" />
+    <Content Include="plugins\flot-charts\examples\series-types\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\shared\jquery-ui\jquery-ui.min.css" />
+    <Content Include="plugins\flot-charts\examples\shared\jquery-ui\jquery-ui.min.js" />
+    <Content Include="plugins\flot-charts\examples\shared\jquery-ui\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\stacking\index.html" />
+    <Content Include="plugins\flot-charts\examples\stacking\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\symbols\index.html" />
+    <Content Include="plugins\flot-charts\examples\symbols\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\threshold\index.html" />
+    <Content Include="plugins\flot-charts\examples\threshold\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\tracking\index.html" />
+    <Content Include="plugins\flot-charts\examples\tracking\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\visitors\index.html" />
+    <Content Include="plugins\flot-charts\examples\visitors\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\zooming\index.html" />
+    <Content Include="plugins\flot-charts\examples\zooming\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\examples\_notes\dwsync.xml" />
+    <Content Include="plugins\flot-charts\excanvas.js" />
+    <Content Include="plugins\flot-charts\excanvas.min.js" />
+    <Content Include="plugins\flot-charts\jquery.colorhelpers.js" />
+    <Content Include="plugins\flot-charts\jquery.colorhelpers.min.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.canvas.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.canvas.min.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.categories.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.categories.min.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.crosshair.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.crosshair.min.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.errorbars.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.errorbars.min.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.fillbetween.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.fillbetween.min.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.image.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.image.min.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.min.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.navigate.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.navigate.min.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.pie.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.pie.min.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.resize.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.resize.min.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.selection.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.selection.min.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.stack.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.stack.min.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.symbol.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.symbol.min.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.threshold.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.threshold.min.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.time.js" />
+    <Content Include="plugins\flot-charts\jquery.flot.time.min.js" />
+    <Content Include="plugins\flot-charts\jquery.js" />
+    <Content Include="plugins\flot-charts\jquery.min.js" />
+    <Content Include="plugins\flot-charts\LICENSE.txt" />
+    <Content Include="plugins\flot-charts\_notes\dwsync.xml" />
+    <Content Include="plugins\font-awesome\css\font-awesome.css" />
+    <Content Include="plugins\font-awesome\css\font-awesome.min.css" />
+    <Content Include="plugins\font-awesome\css\_notes\dwsync.xml" />
+    <Content Include="plugins\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="plugins\font-awesome\fonts\_notes\dwsync.xml" />
+    <Content Include="plugins\font-awesome\less\_notes\dwsync.xml" />
+    <Content Include="plugins\font-awesome\scss\_notes\dwsync.xml" />
+    <Content Include="plugins\fooTable\css\fonts\footable.svg" />
+    <Content Include="plugins\fooTable\css\fonts\_notes\dwsync.xml" />
+    <Content Include="plugins\fooTable\css\footable.core.css" />
+    <Content Include="plugins\fooTable\css\footable.core.min.css" />
+    <Content Include="plugins\fooTable\css\footable.metro.css" />
+    <Content Include="plugins\fooTable\css\footable.metro.min.css" />
+    <Content Include="plugins\fooTable\css\footable.standalone.css" />
+    <Content Include="plugins\fooTable\css\footable.standalone.min.css" />
+    <Content Include="plugins\fooTable\css\_notes\dwsync.xml" />
+    <Content Include="plugins\fooTable\demos\accordion.htm" />
+    <Content Include="plugins\fooTable\demos\add-delete-row.htm" />
+    <Content Include="plugins\fooTable\demos\ajax-redraw.htm" />
+    <Content Include="plugins\fooTable\demos\ajax.htm" />
+    <Content Include="plugins\fooTable\demos\api.htm" />
+    <Content Include="plugins\fooTable\demos\arbitrary_toggle_markup.htm" />
+    <Content Include="plugins\fooTable\demos\auto-expand-first-row-on-breakpoint.htm" />
+    <Content Include="plugins\fooTable\demos\bookmarkable.htm" />
+    <Content Include="plugins\fooTable\demos\bug-fixes\bug-data-ignore.htm" />
+    <Content Include="plugins\fooTable\demos\bug-fixes\bug-remove-unneeded-detail-row-click.htm" />
+    <Content Include="plugins\fooTable\demos\bug-fixes\bug-unused-breakpoints.htm" />
+    <Content Include="plugins\fooTable\demos\bug-fixes\_notes\dwsync.xml" />
+    <Content Include="plugins\fooTable\demos\css\arbitrary_toggle_markup.css" />
+    <Content Include="plugins\fooTable\demos\css\bootstrap-glyphicons.css" />
+    <Content Include="plugins\fooTable\demos\css\bootstrap-responsive.css" />
+    <Content Include="plugins\fooTable\demos\css\bootstrap.css" />
+    <Content Include="plugins\fooTable\demos\css\bootstrapSwitch.css" />
+    <Content Include="plugins\fooTable\demos\css\footable-demos.css" />
+    <Content Include="plugins\fooTable\demos\css\_notes\dwsync.xml" />
+    <Content Include="plugins\fooTable\demos\data-attributes.htm" />
+    <Content Include="plugins\fooTable\demos\demo-template.htm" />
+    <Content Include="plugins\fooTable\demos\editable-columns.htm" />
+    <Content Include="plugins\fooTable\demos\event-interception.htm" />
+    <Content Include="plugins\fooTable\demos\events.htm" />
+    <Content Include="plugins\fooTable\demos\expand-collapse-all.htm" />
+    <Content Include="plugins\fooTable\demos\filtering.htm" />
+    <Content Include="plugins\fooTable\demos\fonts\glyphiconshalflings-regular.svg" />
+    <Content Include="plugins\fooTable\demos\fonts\_notes\dwsync.xml" />
+    <Content Include="plugins\fooTable\demos\getting-started.htm" />
+    <Content Include="plugins\fooTable\demos\grid.htm" />
+    <Content Include="plugins\fooTable\demos\group-headers.htm" />
+    <Content Include="plugins\fooTable\demos\hidden-columns.htm" />
+    <Content Include="plugins\fooTable\demos\icon-styles.htm" />
+    <Content Include="plugins\fooTable\demos\img\footable.png" />
+    <Content Include="plugins\fooTable\demos\img\minus.png" />
+    <Content Include="plugins\fooTable\demos\img\plus.png" />
+    <Content Include="plugins\fooTable\demos\img\_notes\dwsync.xml" />
+    <Content Include="plugins\fooTable\demos\index.htm" />
+    <Content Include="plugins\fooTable\demos\js\bootstrap-tab.js" />
+    <Content Include="plugins\fooTable\demos\js\bootstrapSwitch.js" />
+    <Content Include="plugins\fooTable\demos\js\data-generator.js" />
+    <Content Include="plugins\fooTable\demos\js\demos.js" />
+    <Content Include="plugins\fooTable\demos\js\jquery-1.9.1.min.js" />
+    <Content Include="plugins\fooTable\demos\js\jquery.mockjax.js" />
+    <Content Include="plugins\fooTable\demos\js\mustache.js" />
+    <Content Include="plugins\fooTable\demos\js\_notes\dwsync.xml" />
+    <Content Include="plugins\fooTable\demos\metro-theme.htm" />
+    <Content Include="plugins\fooTable\demos\multiple-showcases.htm" />
+    <Content Include="plugins\fooTable\demos\old-theme.htm" />
+    <Content Include="plugins\fooTable\demos\paging.htm" />
+    <Content Include="plugins\fooTable\demos\reset.htm" />
+    <Content Include="plugins\fooTable\demos\row-toggle.htm" />
+    <Content Include="plugins\fooTable\demos\showcase.htm" />
+    <Content Include="plugins\fooTable\demos\sorting.htm" />
+    <Content Include="plugins\fooTable\demos\striping.htm" />
+    <Content Include="plugins\fooTable\demos\todo\column-groupings.htm" />
+    <Content Include="plugins\fooTable\demos\todo\demo-ajax-with-mustache.htm" />
+    <Content Include="plugins\fooTable\demos\todo\demo-bootstrapSwitch.htm" />
+    <Content Include="plugins\fooTable\demos\todo\demo-colspan.htm" />
+    <Content Include="plugins\fooTable\demos\todo\demo-widthHeightOverride.htm" />
+    <Content Include="plugins\fooTable\demos\todo\demo-zebra.htm" />
+    <Content Include="plugins\fooTable\demos\todo\_notes\dwsync.xml" />
+    <Content Include="plugins\fooTable\demos\triggers.htm" />
+    <Content Include="plugins\fooTable\demos\_notes\dwsync.xml" />
+    <Content Include="plugins\fooTable\dist\footable.all.min.js" />
+    <Content Include="plugins\fooTable\dist\footable.bookmarkable.min.js" />
+    <Content Include="plugins\fooTable\dist\footable.filter.min.js" />
+    <Content Include="plugins\fooTable\dist\footable.grid.min.js" />
+    <Content Include="plugins\fooTable\dist\footable.min.js" />
+    <Content Include="plugins\fooTable\dist\footable.paginate.min.js" />
+    <Content Include="plugins\fooTable\dist\footable.sort.min.js" />
+    <Content Include="plugins\fooTable\dist\footable.striping.min.js" />
+    <Content Include="plugins\fooTable\dist\_notes\dwsync.xml" />
+    <Content Include="plugins\fooTable\Gruntfile.js" />
+    <Content Include="plugins\fooTable\icomoon\_notes\dwsync.xml" />
+    <Content Include="plugins\fooTable\js\footable.bookmarkable.js" />
+    <Content Include="plugins\fooTable\js\footable.filter.js" />
+    <Content Include="plugins\fooTable\js\footable.grid.js" />
+    <Content Include="plugins\fooTable\js\footable.js" />
+    <Content Include="plugins\fooTable\js\footable.memory.js" />
+    <Content Include="plugins\fooTable\js\footable.paginate.js" />
+    <Content Include="plugins\fooTable\js\footable.plugin.template.js" />
+    <Content Include="plugins\fooTable\js\footable.sort.js" />
+    <Content Include="plugins\fooTable\js\footable.striping.js" />
+    <Content Include="plugins\fooTable\js\_notes\dwsync.xml" />
+    <Content Include="plugins\fooTable\less\_notes\dwsync.xml" />
+    <Content Include="plugins\fooTable\screenshot.jpg" />
+    <Content Include="plugins\fooTable\_notes\dwsync.xml" />
+    <Content Include="plugins\fullcalendar\changelog.txt" />
+    <Content Include="plugins\fullcalendar\demos\agenda-views.html" />
+    <Content Include="plugins\fullcalendar\demos\background-events.html" />
+    <Content Include="plugins\fullcalendar\demos\basic-views.html" />
+    <Content Include="plugins\fullcalendar\demos\default.html" />
+    <Content Include="plugins\fullcalendar\demos\external-dragging.html" />
+    <Content Include="plugins\fullcalendar\demos\gcal.html" />
+    <Content Include="plugins\fullcalendar\demos\json.html" />
+    <Content Include="plugins\fullcalendar\demos\json\_notes\dwsync.xml" />
+    <Content Include="plugins\fullcalendar\demos\languages.html" />
+    <Content Include="plugins\fullcalendar\demos\php\get-events.php" />
+    <Content Include="plugins\fullcalendar\demos\php\get-timezones.php" />
+    <Content Include="plugins\fullcalendar\demos\php\utils.php" />
+    <Content Include="plugins\fullcalendar\demos\php\_notes\dwsync.xml" />
+    <Content Include="plugins\fullcalendar\demos\selectable.html" />
+    <Content Include="plugins\fullcalendar\demos\theme.html" />
+    <Content Include="plugins\fullcalendar\demos\timezones.html" />
+    <Content Include="plugins\fullcalendar\demos\_notes\dwsync.xml" />
+    <Content Include="plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="plugins\fullcalendar\fullcalendar.js" />
+    <Content Include="plugins\fullcalendar\fullcalendar.min.css" />
+    <Content Include="plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="plugins\fullcalendar\fullcalendar.print.css" />
+    <Content Include="plugins\fullcalendar\gcal.js" />
+    <Content Include="plugins\fullcalendar\lang-all.js" />
+    <Content Include="plugins\fullcalendar\lang\ar-ma.js" />
+    <Content Include="plugins\fullcalendar\lang\ar-sa.js" />
+    <Content Include="plugins\fullcalendar\lang\ar-tn.js" />
+    <Content Include="plugins\fullcalendar\lang\ar.js" />
+    <Content Include="plugins\fullcalendar\lang\bg.js" />
+    <Content Include="plugins\fullcalendar\lang\ca.js" />
+    <Content Include="plugins\fullcalendar\lang\cs.js" />
+    <Content Include="plugins\fullcalendar\lang\da.js" />
+    <Content Include="plugins\fullcalendar\lang\de-at.js" />
+    <Content Include="plugins\fullcalendar\lang\de.js" />
+    <Content Include="plugins\fullcalendar\lang\el.js" />
+    <Content Include="plugins\fullcalendar\lang\en-au.js" />
+    <Content Include="plugins\fullcalendar\lang\en-ca.js" />
+    <Content Include="plugins\fullcalendar\lang\en-gb.js" />
+    <Content Include="plugins\fullcalendar\lang\es.js" />
+    <Content Include="plugins\fullcalendar\lang\fa.js" />
+    <Content Include="plugins\fullcalendar\lang\fi.js" />
+    <Content Include="plugins\fullcalendar\lang\fr-ca.js" />
+    <Content Include="plugins\fullcalendar\lang\fr.js" />
+    <Content Include="plugins\fullcalendar\lang\he.js" />
+    <Content Include="plugins\fullcalendar\lang\hi.js" />
+    <Content Include="plugins\fullcalendar\lang\hr.js" />
+    <Content Include="plugins\fullcalendar\lang\hu.js" />
+    <Content Include="plugins\fullcalendar\lang\id.js" />
+    <Content Include="plugins\fullcalendar\lang\is.js" />
+    <Content Include="plugins\fullcalendar\lang\it.js" />
+    <Content Include="plugins\fullcalendar\lang\ja.js" />
+    <Content Include="plugins\fullcalendar\lang\ko.js" />
+    <Content Include="plugins\fullcalendar\lang\lt.js" />
+    <Content Include="plugins\fullcalendar\lang\lv.js" />
+    <Content Include="plugins\fullcalendar\lang\nl.js" />
+    <Content Include="plugins\fullcalendar\lang\pl.js" />
+    <Content Include="plugins\fullcalendar\lang\pt-br.js" />
+    <Content Include="plugins\fullcalendar\lang\pt.js" />
+    <Content Include="plugins\fullcalendar\lang\ro.js" />
+    <Content Include="plugins\fullcalendar\lang\ru.js" />
+    <Content Include="plugins\fullcalendar\lang\sk.js" />
+    <Content Include="plugins\fullcalendar\lang\sl.js" />
+    <Content Include="plugins\fullcalendar\lang\sr-cyrl.js" />
+    <Content Include="plugins\fullcalendar\lang\sr.js" />
+    <Content Include="plugins\fullcalendar\lang\sv.js" />
+    <Content Include="plugins\fullcalendar\lang\th.js" />
+    <Content Include="plugins\fullcalendar\lang\tr.js" />
+    <Content Include="plugins\fullcalendar\lang\uk.js" />
+    <Content Include="plugins\fullcalendar\lang\vi.js" />
+    <Content Include="plugins\fullcalendar\lang\zh-cn.js" />
+    <Content Include="plugins\fullcalendar\lang\zh-tw.js" />
+    <Content Include="plugins\fullcalendar\lang\_notes\dwsync.xml" />
+    <Content Include="plugins\fullcalendar\lib\cupertino\images\animated-overlay.gif" />
+    <Content Include="plugins\fullcalendar\lib\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="plugins\fullcalendar\lib\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="plugins\fullcalendar\lib\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="plugins\fullcalendar\lib\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="plugins\fullcalendar\lib\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="plugins\fullcalendar\lib\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="plugins\fullcalendar\lib\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="plugins\fullcalendar\lib\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="plugins\fullcalendar\lib\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="plugins\fullcalendar\lib\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="plugins\fullcalendar\lib\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="plugins\fullcalendar\lib\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="plugins\fullcalendar\lib\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="plugins\fullcalendar\lib\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="plugins\fullcalendar\lib\cupertino\images\_notes\dwsync.xml" />
+    <Content Include="plugins\fullcalendar\lib\cupertino\jquery-ui.min.css" />
+    <Content Include="plugins\fullcalendar\lib\cupertino\_notes\dwsync.xml" />
+    <Content Include="plugins\fullcalendar\lib\jquery-ui.custom.min.js" />
+    <Content Include="plugins\fullcalendar\lib\jquery.min.js" />
+    <Content Include="plugins\fullcalendar\lib\moment.min.js" />
+    <Content Include="plugins\fullcalendar\lib\_notes\dwsync.xml" />
+    <Content Include="plugins\fullcalendar\license.txt" />
+    <Content Include="plugins\fullcalendar\_notes\dwsync.xml" />
+    <Content Include="plugins\gauge-js\gauge.js" />
+    <Content Include="plugins\gauge-js\gauge.min.js" />
+    <Content Include="plugins\gauge-js\_notes\dwsync.xml" />
+    <Content Include="plugins\gmaps\examples\basic.html" />
+    <Content Include="plugins\gmaps\examples\context_menu.html" />
+    <Content Include="plugins\gmaps\examples\custom_controls.html" />
+    <Content Include="plugins\gmaps\examples\elevation_locations.html" />
+    <Content Include="plugins\gmaps\examples\elevation_routes.html" />
+    <Content Include="plugins\gmaps\examples\examples.css" />
+    <Content Include="plugins\gmaps\examples\fusion_tables.html" />
+    <Content Include="plugins\gmaps\examples\geocoding.html" />
+    <Content Include="plugins\gmaps\examples\geofences.html" />
+    <Content Include="plugins\gmaps\examples\geolocation.html" />
+    <Content Include="plugins\gmaps\examples\geometry.html" />
+    <Content Include="plugins\gmaps\examples\kml.html" />
+    <Content Include="plugins\gmaps\examples\layers.html" />
+    <Content Include="plugins\gmaps\examples\layers_places.html" />
+    <Content Include="plugins\gmaps\examples\map_events.html" />
+    <Content Include="plugins\gmaps\examples\map_types.html" />
+    <Content Include="plugins\gmaps\examples\markers.html" />
+    <Content Include="plugins\gmaps\examples\marker_clusterer.html" />
+    <Content Include="plugins\gmaps\examples\overlays.html" />
+    <Content Include="plugins\gmaps\examples\overlay_map_types.html" />
+    <Content Include="plugins\gmaps\examples\polygons.html" />
+    <Content Include="plugins\gmaps\examples\polylines.html" />
+    <Content Include="plugins\gmaps\examples\routes.html" />
+    <Content Include="plugins\gmaps\examples\routes_advanced.html" />
+    <Content Include="plugins\gmaps\examples\static.html" />
+    <Content Include="plugins\gmaps\examples\static_markers.html" />
+    <Content Include="plugins\gmaps\examples\static_polylines.html" />
+    <Content Include="plugins\gmaps\examples\static_styles.html" />
+    <Content Include="plugins\gmaps\examples\styled_maps.html" />
+    <Content Include="plugins\gmaps\examples\travel_route.html" />
+    <Content Include="plugins\gmaps\examples\_notes\dwsync.xml" />
+    <Content Include="plugins\gmaps\gmaps.js" />
+    <Content Include="plugins\gmaps\lib\gmaps.controls.js" />
+    <Content Include="plugins\gmaps\lib\gmaps.core.js" />
+    <Content Include="plugins\gmaps\lib\gmaps.events.js" />
+    <Content Include="plugins\gmaps\lib\gmaps.geofences.js" />
+    <Content Include="plugins\gmaps\lib\gmaps.geometry.js" />
+    <Content Include="plugins\gmaps\lib\gmaps.layers.js" />
+    <Content Include="plugins\gmaps\lib\gmaps.map_types.js" />
+    <Content Include="plugins\gmaps\lib\gmaps.markers.js" />
+    <Content Include="plugins\gmaps\lib\gmaps.native_extensions.js" />
+    <Content Include="plugins\gmaps\lib\gmaps.overlays.js" />
+    <Content Include="plugins\gmaps\lib\gmaps.routes.js" />
+    <Content Include="plugins\gmaps\lib\gmaps.static.js" />
+    <Content Include="plugins\gmaps\lib\gmaps.streetview.js" />
+    <Content Include="plugins\gmaps\lib\gmaps.styles.js" />
+    <Content Include="plugins\gmaps\lib\gmaps.utils.js" />
+    <Content Include="plugins\gmaps\lib\_notes\dwsync.xml" />
+    <Content Include="plugins\gmaps\License.txt" />
+    <Content Include="plugins\gmaps\test\index.html" />
+    <Content Include="plugins\gmaps\test\lib\jasmine-html.js" />
+    <Content Include="plugins\gmaps\test\lib\jasmine.css" />
+    <Content Include="plugins\gmaps\test\lib\jasmine.js" />
+    <Content Include="plugins\gmaps\test\lib\_notes\dwsync.xml" />
+    <Content Include="plugins\gmaps\test\spec\ControlSpec.js" />
+    <Content Include="plugins\gmaps\test\spec\EventSpec.js" />
+    <Content Include="plugins\gmaps\test\spec\GeometrySpec.js" />
+    <Content Include="plugins\gmaps\test\spec\LayerSpec.js" />
+    <Content Include="plugins\gmaps\test\spec\MapSpec.js" />
+    <Content Include="plugins\gmaps\test\spec\MarkerSpec.js" />
+    <Content Include="plugins\gmaps\test\spec\OverlaySpec.js" />
+    <Content Include="plugins\gmaps\test\spec\RouteSpec.js" />
+    <Content Include="plugins\gmaps\test\spec\StreetViewSpec.js" />
+    <Content Include="plugins\gmaps\test\spec\StyleSpec.js" />
+    <Content Include="plugins\gmaps\test\spec\_notes\dwsync.xml" />
+    <Content Include="plugins\gmaps\test\style.css" />
+    <Content Include="plugins\gmaps\test\template\jasmine-gmaps.html" />
+    <Content Include="plugins\gmaps\test\template\_notes\dwsync.xml" />
+    <Content Include="plugins\gmaps\test\_notes\dwsync.xml" />
+    <Content Include="plugins\gmaps\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\angularjs.html" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\basic-plus.html" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\basic.html" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\cors\postmessage.html" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\cors\result.html" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\cors\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\css\demo-ie8.css" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\css\demo.css" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\css\jquery.fileupload-noscript.css" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\css\jquery.fileupload-ui-noscript.css" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\css\jquery.fileupload-ui.css" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\css\jquery.fileupload.css" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\css\style.css" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\css\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\Gruntfile.js" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\img\loading.gif" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\img\progressbar.gif" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\img\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\index.html" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\jquery-ui.html" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\js\app.js" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\js\cors\jquery.postmessage-transport.js" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\js\cors\jquery.xdr-transport.js" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\js\cors\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\js\jquery.fileupload-angular.js" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\js\jquery.fileupload-audio.js" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\js\jquery.fileupload-image.js" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\js\jquery.fileupload-jquery-ui.js" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\js\jquery.fileupload-process.js" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\js\jquery.fileupload-ui.js" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\js\jquery.fileupload-validate.js" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\js\jquery.fileupload-video.js" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\js\jquery.fileupload.js" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\js\jquery.iframe-transport.js" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\js\main.js" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\js\vendor\jquery.ui.widget.js" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\js\vendor\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\js\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\gae-go\app\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\gae-go\static\favicon.ico" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\gae-go\static\robots.txt" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\gae-go\static\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\gae-go\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\gae-python\static\favicon.ico" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\gae-python\static\robots.txt" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\gae-python\static\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\gae-python\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\node\public\files\thumbnail\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\node\public\files\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\node\server.js" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\node\tmp\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\node\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\php\files\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\php\index.php" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\php\UploadHandler.php" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\server\php\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\test\index.html" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\test\test.js" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\test\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-File-Upload-9.5.8\_notes\dwsync.xml" />
+    <Content Include="plugins\jQuery-Scanner-Detection\CHANGELOG.txt" />
+    <Content Include="plugins\jQuery-Scanner-Detection\jquery.scannerdetection.compatibility.js" />
+    <Content Include="plugins\jQuery-Scanner-Detection\jquery.scannerdetection.js" />
+    <Content Include="plugins\jQuery-Scanner-Detection\_notes\dwsync.xml" />
+    <Content Include="plugins\mapplic\apmapplic.js" />
+    <Content Include="plugins\mapplic\images\alpha20.png" />
+    <Content Include="plugins\mapplic\images\alpha50.png" />
+    <Content Include="plugins\mapplic\images\arrow-down%402x.png" />
+    <Content Include="plugins\mapplic\images\arrow-down.png" />
+    <Content Include="plugins\mapplic\images\arrow-up%402x.png" />
+    <Content Include="plugins\mapplic\images\arrow-up.png" />
+    <Content Include="plugins\mapplic\images\closedhand.cur" />
+    <Content Include="plugins\mapplic\images\cross%402x.png" />
+    <Content Include="plugins\mapplic\images\cross.png" />
+    <Content Include="plugins\mapplic\images\fullscreen-exit.png" />
+    <Content Include="plugins\mapplic\images\fullscreen.png" />
+    <Content Include="plugins\mapplic\images\loader.gif" />
+    <Content Include="plugins\mapplic\images\minus%402x.png" />
+    <Content Include="plugins\mapplic\images\minus.png" />
+    <Content Include="plugins\mapplic\images\openhand.cur" />
+    <Content Include="plugins\mapplic\images\pin%402x.png" />
+    <Content Include="plugins\mapplic\images\pin-blue%402x.png" />
+    <Content Include="plugins\mapplic\images\pin-blue-large%402x.png" />
+    <Content Include="plugins\mapplic\images\pin-blue-large.png" />
+    <Content Include="plugins\mapplic\images\pin-blue.png" />
+    <Content Include="plugins\mapplic\images\pin-filled.png" />
+    <Content Include="plugins\mapplic\images\pin-green%402x.png" />
+    <Content Include="plugins\mapplic\images\pin-green-large%402x.png" />
+    <Content Include="plugins\mapplic\images\pin-green-large.png" />
+    <Content Include="plugins\mapplic\images\pin-green.png" />
+    <Content Include="plugins\mapplic\images\pin-large%402x.png" />
+    <Content Include="plugins\mapplic\images\pin-large.png" />
+    <Content Include="plugins\mapplic\images\pin-orange%402x.png" />
+    <Content Include="plugins\mapplic\images\pin-orange-large%402x.png" />
+    <Content Include="plugins\mapplic\images\pin-orange-large.png" />
+    <Content Include="plugins\mapplic\images\pin-orange.png" />
+    <Content Include="plugins\mapplic\images\pin-purple%402x.png" />
+    <Content Include="plugins\mapplic\images\pin-purple-large%402x.png" />
+    <Content Include="plugins\mapplic\images\pin-purple-large.png" />
+    <Content Include="plugins\mapplic\images\pin-purple.png" />
+    <Content Include="plugins\mapplic\images\pin-yellow%402x.png" />
+    <Content Include="plugins\mapplic\images\pin-yellow-large%402x.png" />
+    <Content Include="plugins\mapplic\images\pin-yellow-large.png" />
+    <Content Include="plugins\mapplic\images\pin-yellow.png" />
+    <Content Include="plugins\mapplic\images\pin.png" />
+    <Content Include="plugins\mapplic\images\plus%402x.png" />
+    <Content Include="plugins\mapplic\images\plus.png" />
+    <Content Include="plugins\mapplic\images\reset%402x.png" />
+    <Content Include="plugins\mapplic\images\reset.png" />
+    <Content Include="plugins\mapplic\images\viewer%402x.png" />
+    <Content Include="plugins\mapplic\images\viewer.png" />
+    <Content Include="plugins\mapplic\images\_notes\dwsync.xml" />
+    <Content Include="plugins\mapplic\mapplic-ie.css" />
+    <Content Include="plugins\mapplic\mapplic.css" />
+    <Content Include="plugins\mapplic\mapplic.js" />
+    <Content Include="plugins\masked-input\jquery.maskedinput.js" />
+    <Content Include="plugins\masked-input\jquery.maskedinput.min.js" />
+    <Content Include="plugins\masked-input\LICENSE.txt" />
+    <Content Include="plugins\masked-input\_notes\dwsync.xml" />
+    <Content Include="plugins\morris-js\LICENSE.txt" />
+    <Content Include="plugins\morris-js\morris.css" />
+    <Content Include="plugins\morris-js\morris.js" />
+    <Content Include="plugins\morris-js\morris.min.css" />
+    <Content Include="plugins\morris-js\morris.min.js" />
+    <Content Include="plugins\morris-js\raphael-js\LICENSE.txt" />
+    <Content Include="plugins\morris-js\raphael-js\raphael.min.js" />
+    <Content Include="plugins\morris-js\raphael-js\_notes\dwsync.xml" />
+    <Content Include="plugins\morris-js\_notes\dwsync.xml" />
+    <Content Include="plugins\noUiSlider\jquery.nouislider.all.js" />
+    <Content Include="plugins\noUiSlider\jquery.nouislider.all.min.js" />
+    <Content Include="plugins\noUiSlider\jquery.nouislider.css" />
+    <Content Include="plugins\noUiSlider\jquery.nouislider.min.css" />
+    <Content Include="plugins\noUiSlider\jquery.nouislider.pips.css" />
+    <Content Include="plugins\noUiSlider\jquery.nouislider.pips.min.css" />
+    <Content Include="plugins\noUiSlider\_notes\dwsync.xml" />
+    <Content Include="plugins\pace\LICENSE.txt" />
+    <Content Include="plugins\pace\pace.css" />
+    <Content Include="plugins\pace\pace.js" />
+    <Content Include="plugins\pace\pace.min.css" />
+    <Content Include="plugins\pace\pace.min.js" />
+    <Content Include="plugins\pace\_notes\dwsync.xml" />
+    <Content Include="plugins\skycons\README.txt" />
+    <Content Include="plugins\skycons\skycons.js" />
+    <Content Include="plugins\skycons\skycons.min.js" />
+    <Content Include="plugins\skycons\_notes\dwsync.xml" />
+    <Content Include="plugins\sparkline\jquery.sparkline.js" />
+    <Content Include="plugins\sparkline\jquery.sparkline.min.js" />
+    <Content Include="plugins\sparkline\_notes\dwsync.xml" />
+    <Content Include="plugins\summernote\summernote.css" />
+    <Content Include="plugins\summernote\summernote.js" />
+    <Content Include="plugins\summernote\summernote.min.css" />
+    <Content Include="plugins\summernote\summernote.min.js" />
+    <Content Include="plugins\summernote\_notes\dwsync.xml" />
+    <Content Include="plugins\svgPanZoom\jquery.panzoom.js" />
+    <Content Include="plugins\svgPanZoom\jquery.panzoom.min.js" />
+    <Content Include="plugins\svgPanZoom\_notes\dwsync.xml" />
+    <Content Include="plugins\switchery\switchery.css" />
+    <Content Include="plugins\switchery\switchery.js" />
+    <Content Include="plugins\switchery\switchery.min.css" />
+    <Content Include="plugins\switchery\switchery.min.js" />
+    <Content Include="plugins\switchery\_notes\dwsync.xml" />
+    <Content Include="plugins\webCodeCam\beep.mp3" />
+    <Content Include="plugins\webCodeCam\DecoderWorker.js" />
+    <Content Include="plugins\webCodeCam\demo.html" />
+    <Content Include="plugins\webCodeCam\main.js" />
+    <Content Include="plugins\webCodeCam\qrcodelib.js" />
+    <Content Include="plugins\webCodeCam\WebCodeCam.js" />
+    <Content Include="plugins\webCodeCam\WebCodeCam.min.js" />
+    <Content Include="plugins\webCodeCam\_notes\dwsync.xml" />
+    <Content Include="plugins\x-editable\CHANGELOG.txt" />
+    <Content Include="plugins\x-editable\css\bootstrap-editable.css" />
+    <Content Include="plugins\x-editable\css\_notes\dwsync.xml" />
+    <Content Include="plugins\x-editable\img\clear.png" />
+    <Content Include="plugins\x-editable\img\loading.gif" />
+    <Content Include="plugins\x-editable\img\_notes\dwsync.xml" />
+    <Content Include="plugins\x-editable\js\bootstrap-editable.js" />
+    <Content Include="plugins\x-editable\js\bootstrap-editable.min.js" />
+    <Content Include="plugins\x-editable\js\_notes\dwsync.xml" />
+    <Content Include="plugins\x-editable\_notes\dwsync.xml" />
+    <Content Include="Scripts\apfunctions.js" />
+    <Content Include="Scripts\bootstrap-paginator.js" />
+    <Content Include="Scripts\bootstrap-table.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\defaults.js" />
+    <Content Include="Scripts\form-component.js" />
+    <Content Include="Scripts\form-validation.js" />
+    <Content Include="Scripts\form-wizard.js" />
+    <Content Include="Scripts\hammer.min.js" />
+    <Content Include="Scripts\index.js" />
+    <Content Include="Scripts\IndexedDBViewer.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Scripts\jquery.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.easing.js" />
+    <Content Include="Scripts\jquery.mousewheel.js" />
+    <Content Include="Scripts\jquery.redirect.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jscoord.js" />
+    <Content Include="Scripts\knockout-3.3.0.debug.js" />
+    <Content Include="Scripts\knockout-3.3.0.js" />
+    <Content Include="Scripts\misc-gmaps.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\nifty-demo.js" />
+    <Content Include="Scripts\nifty.js" />
+    <Content Include="Scripts\nifty.min.js" />
+    <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\pace.js" />
+    <Content Include="Scripts\pace.min.js" />
+    <Content Include="Scripts\pagerSetUp.js" />
+    <Content Include="Scripts\plugins.min.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\tables.js" />
+    <Content Include="Scripts\ui-panels.js" />
+    <Content Include="Scripts\validator.js" />
+    <Content Include="Scripts\widgets.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index_old.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\nifty.min.js.map" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LayoutMain.cshtml" />
+    <Content Include="Views\Shared\_LayoutPublic.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Dashboard.cshtml" />
+    <Content Include="Views\Home\Projects.cshtml" />
+    <Content Include="Views\Home\Suppliers.cshtml" />
+    <Content Include="Views\Home\Systems.cshtml" />
+    <Content Include="Views\Home\Products.cshtml" />
+    <Content Include="Views\Shared\_LayoutModel.cshtml" />
+    <Content Include="Views\Home\Project.cshtml" />
+    <Content Include="Views\Home\Models.cshtml" />
+    <Content Include="Views\Home\Schedules.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="plugins\flot-charts\examples\gauge\" />
+    <Folder Include="plugins\fullcalendar\less\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53260</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52802/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
