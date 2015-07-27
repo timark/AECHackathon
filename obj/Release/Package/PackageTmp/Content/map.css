@@ -1,0 +1,14 @@
+#landmarks-ground polygon.mapplic-active,
+#landmarks-ground path.mapplic-active {
+	fill: #ADDB2C;
+}
+
+#landmarks-underground polygon.mapplic-active,
+#landmarks-underground path.mapplic-active {
+	fill: #7EE0CD;
+}
+
+#landmarks-level1 polygon.mapplic-active,
+#landmarks-level1 path.mapplic-active {
+	fill: #F9684B;
+}

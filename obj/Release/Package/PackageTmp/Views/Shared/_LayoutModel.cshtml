@@ -1,0 +1,234 @@
+﻿@using Microsoft.AspNet.Identity
+@using System.Security.Claims
+@{
+    var identity = (ClaimsIdentity)User.Identity;
+    //var UserName = identity.FindFirstValue(ClaimTypes.GivenName) ?? identity.GetUserName();
+    var UserName = Session["UserName"];
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+
+    <!--STYLESHEET-->
+    <style>
+        .contentText {
+	        white-space: pre-line;
+	        font-size: 1em;
+        }
+    </style>
+    <!--=================================================-->
+    @Styles.Render("~/Content/AECHackathon")
+
+    <!--SCRIPT-->
+    <!--=================================================-->
+</head>
+
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+
+<body>
+    <div id="container" class="effect mainnav-lg">
+
+        <!--NAVBAR-->
+        <!--===================================================-->
+        <header id="navbar">
+            <div id="navbar-container" class="boxed">
+
+                <!--Brand logo & name-->
+                <!--================================-->
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand">
+                        <img alt="AECHackathon" src="~/Content/images/aechlogo50x50.png" class="brand-icon">
+                        <span class="brand-title" id="Brand">&nbsp;ghost<strong>BIM</strong>Squad</span>
+                    </a>
+                </div>
+                <!--================================-->
+                <!--End brand logo & name-->
+                <!--Navbar Dropdown-->
+                <!--================================-->
+                <div class="navbar-content clearfix">
+                    <ul class="nav navbar-top-links pull-left">
+
+                        <!--Navigation toogle button-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <li class="tgl-menu-btn">
+                            <a class="mainnav-toggle" href="#">
+                                <i class="fa fa-navicon fa-lg"></i>
+                            </a>
+                        </li>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End Navigation toogle button-->
+                        <!--Messages Dropdown-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End message dropdown-->
+                        <!--Notification dropdown-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End notifications dropdown-->
+                        <!--Mega dropdown-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        @Html.Raw(@ViewBag.MegaMenu)
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End mega dropdown-->
+
+                    </ul>
+                    <ul class="nav navbar-top-links pull-right">
+
+                        <li id="dropdown-help" class="dropdown">
+                            <a href="#" data-toggle="dropdown"><i class="fa fa-2x fa-question-circle"></i></a>
+                            <div class="dropdown-menu dropdown-menu-md dropdown-menu-right with-arrow panel-default" id="helpDropdown">
+                                <p>Glad you clicked the help button</p>
+                                <p>The model should have loaded by now if you have a Cube in the top right then thats a good sign</p>
+                                <p>fold the left menu by clicking the <i class="fa fa-navicon fa-lg"></i> in the white header</p>
+                                <p>in the bottom footer menu click the <i class="fa fa-sitemap fa-lg"></i> model Browser </p>
+                                <p>you might have to click it a few times then click the Mechanical Equipment</p>
+                                <p>this will ghost the model except for the equipment</p>
+                                <p>or you can expand the tree and click Cooper-Fin Boiler_2</p>
+                                <p>Click the Boiler and which will turn blue. This has selected the object</p>
+                                <p>Click the <i class="fa fa-th-large fa-lg"></i> in the white header</p>
+                                <p>if Selected Object Properties has a Selected Id and ifcObjectType then it will have search the our Product Library Service</p>
+                                <p>There are 2 Boiler manufacturers with products Click the <i class="fa fa-cubes fa-lg"></i></p>
+                                <p>A modal window will appear with a list of the products from that manufactuer</p>
+                                <p>if there is <i class="fa fa-wrench fa-lg"></i> then the product has maintenance click it</p>
+                                <p>the list of maintenance task will appear in the order they are to be done click the each task to reveal the instructions</p>
+                                <p>Have fun it will work on any object that has an ifcObjectType and we have in our product library</p>
+
+                            </div>
+                        </li>
+                        <li id="dropdown-idea" class="dropdown">
+                            <a href="#" data-toggle="dropdown"><i class="fa fa-2x fa-lightbulb-o"></i></a>
+                            <div class="dropdown-menu dropdown-menu-md dropdown-menu-right with-arrow panel-default" id="ideaDropdown">
+                                <p>Web Service 1 is the application</p>
+                                <p>Web Service 2 is the autodesk portal where the model was uploaded</p>
+                                <p>Web Service 3 was the java tomcat web service (implemented at the event to be installed for this)</p>
+                                <p>Web Service 4 is the product library service on activePLAN's servers</p>
+                            </div>
+                        </li>
+                        <!-- USER DROPDOWN -->
+                        <!--===================================================-->
+                        <li id="dropdown-user" class="dropdown">
+                            <a href="#" data-toggle="dropdown"><span id="UserName">@UserName</span>&nbsp;<i class="fa fa-2x fa-user"></i></a>
+                            <div class="dropdown-menu dropdown-menu-md dropdown-menu-right with-arrow panel-default">
+                                <!-- Dropdown heading  -->
+                                <ul class="head-list">
+                                    @if (Request.IsAuthenticated)
+                                    {
+                                    <!-- Dropdown list -->
+                                        <li> <a href="/organisation/profile"> <i class="fa fa-user fa-fw fa-lg"></i> <span class="text-nowrap">Profile</span> </a> </li>
+                                    <!-- Dropdown list -->
+                                        <li> <a href="/helpdesk/bugs"> <i class="fa fa-bug fa-fw fa-lg"></i> <span>Bug</span> </a> </li>
+                                    }
+                                    else
+                                    {
+                                        <li> <a href="/home/login"> <i class="fa fa-user fa-fw fa-lg"></i> <span class="text-nowrap">Login</span> </a> </li>
+                                    }
+                                </ul>
+
+                                <!-- Dropdown footer -->
+                                <div class="pad-all">
+                                    @if (Request.IsAuthenticated)
+                                    {
+                                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                                        {
+                                            @Html.AntiForgeryToken()
+                                            <a href="javascript:document.getElementById('logoutForm').submit()" class="btn btn-sm btn-primary btn-labeled pull-right fa fa-sign-out icon-lg">Logout</a>
+                                            <a href="/Account/LockScreen" class="btn btn-sm btn-warning btn-labeled fa fa-lock icon-lg">Lock Screen</a>
+                                        }
+                                    }
+                                </div>
+
+                            </div>
+                        </li>
+                        <!-- END OF USER DROPDOWN -->
+                        <!--===================================================-->
+                    </ul>
+
+                </div>
+                <!--================================-->
+                <!--End Navbar Dropdown-->
+
+            </div>
+        </header>
+        <!--===================================================-->
+        <!--END NAVBAR-->
+
+        <div class="boxed">
+
+            <!--CONTENT CONTAINER-->
+            <!--===================================================-->
+            @RenderBody()
+            <!--===================================================-->
+            <!--END CONTENT CONTAINER-->
+            <!--MAIN NAVIGATION-->
+            <!--===================================================-->
+            <nav id="mainnav-container">
+                <div id="mainnav">
+
+                    <!-- MAIN NAVIGATION : SHORTCUT -->
+                    <!--===================================================-->
+                    <!--Shortcut buttons-->
+                    <!--================================-->
+                    <div id="mainnav-shortcut">
+                       
+                    </div>                 
+                    <!--================================-->
+                    <!--End shortcut buttons-->
+                    <!--===================================================-->
+                    <!-- MAIN NAVIGATION : SHORTCUT -->
+                    <!-- MAIN NAVIGATION : MENU -->
+                    <!--===================================================-->
+                    <div id="mainnav-menu-wrap">
+                        <div class="nano">
+                            <div class="nano-content">
+                                <ul id="mainnav-menu" class="list-group">
+                                    @Html.Raw(@ViewBag.NavMenu)
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!--===================================================-->
+                    <!-- END OF MAIN NAVIGATION : MENU -->
+
+                </div>
+            </nav>
+            <!--===================================================-->
+            <!--END MAIN NAVIGATION-->
+            <!--ASIDE-->
+            <!--===================================================-->
+            <aside id="aside-container">
+                <div id="aside">
+
+                </div>
+            </aside>
+            <!--===================================================-->
+            <!--END ASIDE-->
+
+        </div>
+
+
+
+        <!-- FOOTER -->
+        <!--===================================================-->
+        
+        <!--===================================================-->
+        <!-- END FOOTER -->
+        <!-- SCROLL TOP BUTTON -->
+        <!--===================================================-->
+        <button id="scroll-top" class="btn"><i class="fa fa-chevron-up"></i></button>
+        <!--===================================================-->
+
+
+
+    </div>
+ 
+</body>
+</html>
+@RenderSection("scripts", required: false)
