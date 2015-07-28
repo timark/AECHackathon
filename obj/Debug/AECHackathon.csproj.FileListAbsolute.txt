@@ -1,63 +1,71 @@
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\AECHackathon.dll.config
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\AECHackathon.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\AECHackathon.pdb
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Antlr3.Runtime.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\EntityFramework.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\EntityFramework.SqlServer.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.AspNet.Identity.Core.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.AspNet.Identity.Owin.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Owin.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Owin.Host.SystemWeb.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Owin.Security.Cookies.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Owin.Security.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Owin.Security.Facebook.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Owin.Security.Google.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Owin.Security.OAuth.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Owin.Security.Twitter.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Web.Infrastructure.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Newtonsoft.Json.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Owin.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Net.Http.Formatting.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.Helpers.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.Http.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.Http.Owin.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.Http.WebHost.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.Mvc.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.Optimization.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.Razor.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.WebPages.Deployment.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.WebPages.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.WebPages.Razor.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\WebGrease.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Antlr3.Runtime.pdb
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\EntityFramework.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\EntityFramework.SqlServer.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.AspNet.Identity.Core.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.AspNet.Identity.Owin.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Owin.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Owin.Host.SystemWeb.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Owin.Security.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Owin.Security.Cookies.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Owin.Security.Facebook.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Owin.Security.Google.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Owin.Security.OAuth.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Microsoft.Owin.Security.Twitter.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\Newtonsoft.Json.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Net.Http.Formatting.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.Helpers.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.Http.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.Http.Owin.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.Http.WebHost.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.Mvc.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.Razor.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.WebPages.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.WebPages.Deployment.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.WebPages.Razor.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\bin\System.Web.Optimization.xml
-D:\Visual Studio Projects\AECHackathon\AECHackathon\obj\Debug\AECHackathon.dll
-D:\Visual Studio Projects\AECHackathon\AECHackathon\obj\Debug\AECHackathon.pdb
-D:\Visual Studio Projects\AECHackathon\AECHackathon\obj\Debug\AECHackathon.csprojResolveAssemblyReference.cache
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\AECHackathon.dll.config
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\AECHackathon.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\AECHackathon.pdb
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Antlr3.Runtime.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\AttributeRouting.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\AttributeRouting.Web.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\AttributeRouting.Web.Mvc.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\EntityFramework.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\EntityFramework.SqlServer.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Owin.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Owin.Security.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Newtonsoft.Json.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Owin.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Net.Http.Formatting.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.Helpers.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.Http.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.Http.Owin.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.Http.WebHost.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.Mvc.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.Optimization.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.Razor.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.WebPages.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.WebPages.Razor.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\WebActivator.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\WebGrease.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Antlr3.Runtime.pdb
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\AttributeRouting.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\AttributeRouting.Web.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\AttributeRouting.Web.Mvc.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\EntityFramework.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\EntityFramework.SqlServer.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Owin.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Owin.Security.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\Newtonsoft.Json.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Net.Http.Formatting.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.Helpers.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.Http.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.Http.Owin.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.Http.WebHost.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.Mvc.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.Optimization.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.Razor.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.WebPages.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\System.Web.WebPages.Razor.xml
+C:\Users\Sean\Documents\GitHub\AECHackathon\bin\WebActivator.pdb
+C:\Users\Sean\Documents\GitHub\AECHackathon\obj\Debug\AECHackathon.csprojResolveAssemblyReference.cache
+C:\Users\Sean\Documents\GitHub\AECHackathon\obj\Debug\AECHackathon.dll
+C:\Users\Sean\Documents\GitHub\AECHackathon\obj\Debug\AECHackathon.pdb
